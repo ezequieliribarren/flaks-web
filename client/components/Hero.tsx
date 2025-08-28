@@ -3,7 +3,7 @@ import { ArrowRight, Zap, Play } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-flaks-dark via-flaks-dark-secondary to-flaks-dark min-h-[90vh] flex items-center overflow-hidden">
+    <section className="relative bg-gradient-to-br from-flaks-gradient-start to-flaks-gradient-end min-h-[90vh] flex items-center overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-flaks-green/10 rounded-full blur-3xl"></div>

@@ -67,7 +67,7 @@ export default function Benefits() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-flaks-dark via-flaks-dark-secondary to-flaks-dark relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-flaks-gradient-start to-flaks-gradient-end relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-10 right-10 w-64 h-64 bg-flaks-green/5 rounded-full blur-3xl"></div>
