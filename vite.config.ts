@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
     fs: {
-      allow: ["./client", "./shared"],
+      allow: ["./client", "./shared", "./src"],
       deny: [".env", ".env.*", "*.{crt,pem}", "**/.git/**", "server/**"],
     },
   },
@@ -33,6 +33,11 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./client"),
       "@shared": path.resolve(__dirname, "./shared"),
+      // Workaround for antivirus false-positive on lucide chrome icon file
+      "lucide-react/dist/esm/icons/chrome.js": path.resolve(
+        __dirname,
+        "./src/shims/lucide-chrome-stub.js",
+      ),
     },
   },
 }));
