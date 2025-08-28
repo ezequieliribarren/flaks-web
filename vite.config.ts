@@ -7,6 +7,10 @@ import fs from "fs";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   appType: "mpa",
+  esbuild: {
+    drop: ["console", "debugger"],
+    pure: ["console.log", "console.info"],
+  },
   server: {
     host: "::",
     port: 8080,
@@ -29,6 +33,11 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     outDir: "dist",
+    target: "es2018",
+    minify: "esbuild",
+    cssCodeSplit: true,
+    sourcemap: false,
+    modulePreload: { polyfill: false },
     rollupOptions: {
       input: {
         home: resolve(__dirname, "index.html"),
@@ -39,6 +48,15 @@ export default defineConfig(({ mode }) => ({
         lpA: resolve(__dirname, "lp/landing-a/index.html"),
         lpB: resolve(__dirname, "lp/landing-b/index.html"),
         gracias: resolve(__dirname, "gracias/index.html"),
+      },
+      output: {
+        manualChunks(id) {
+          if (id.includes("node_modules")) {
+            if (id.includes("react") || id.includes("scheduler")) return "vendor-react";
+            if (id.includes("lucide-react")) return "vendor-icons";
+            return "vendor";
+          }
+        },
       },
     },
   },

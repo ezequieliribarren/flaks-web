@@ -1,1 +1,0 @@
-import{a as t,j as o,A as r}from"./Footer-Cme-k0vZ.js";import{R as e}from"./RedesSociales-DPrbHJh_.js";import"./card-GtdypIvD.js";import"./ContactForm-CgzvVtxe.js";import"./message-circle-FcD932QH.js";import"./circle-check-big-DCw_s_-H.js";import"./zap-74o-0AP3.js";const m=document.getElementById("root");t(m).render(o.jsx(r,{children:o.jsx(e,{})}));

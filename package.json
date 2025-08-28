@@ -13,10 +13,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "node ./scripts/update-deploy-branch.mjs",
     "start": "vite preview --port 8080",
-    "deploy:branch:ps": "powershell -ExecutionPolicy Bypass -File ./scripts/deploy-branch.ps1",
-    "deploy:branch:sh": "bash ./scripts/deploy-branch.sh",
     "test": "vitest --run",
     "format.fix": "prettier --write .",
     "typecheck": "tsc"
