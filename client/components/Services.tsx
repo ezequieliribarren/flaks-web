@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 
 export default function Services() {
-  const services = [
+  const webDevelopmentPlans = [
     {
       icon: Globe,
       title: "Landing Page",
@@ -21,39 +21,48 @@ export default function Services() {
         "Página única y diseño a medida",
         "Hosting, dominio .com.ar y SSL",
         "Optimizada para móviles",
-        "Formulario de contacto integrado"
+        "Formulario de contacto integrado",
+        "Tiempo de entrega: 7 días"
       ],
       highlight: "DESDE $25.000",
-      color: "from-blue-500 to-blue-600"
+      color: "from-blue-500 to-blue-600",
+      ctaText: "Ver Detalles Landing",
+      ctaLink: "/desarrollo-web/landing-page"
     },
     {
-      icon: ShoppingCart,
+      icon: Code,
       title: "Web Corporativa",
       subtitle: "POSICIONÁ Y ESCALÁ TU MARCA",
       description: "Ideal para empresas",
       features: [
         "Hasta 5 páginas a medida",
         "Hosting, dominio .com.ar y SSL",
-        "Integración de plataformas de pago y métodos de envío",
-        "Panel de administración completo"
+        "Panel de administración CMS",
+        "SEO básico incluido",
+        "Tiempo de entrega: 15 días"
       ],
       highlight: "DESDE $45.000",
       color: "from-flaks-green to-emerald-400",
-      featured: true
+      featured: true,
+      ctaText: "Ver Detalles Corporativa",
+      ctaLink: "/desarrollo-web/web-corporativa"
     },
     {
-      icon: Rocket,
-      title: "Tienda Digital",
-      subtitle: "¡VENDÉ A TODA HORA!",
-      description: "E-commerce autogestionable",
+      icon: ShoppingCart,
+      title: "E-commerce",
+      subtitle: "¡VENDÉ ONLINE 24/7!",
+      description: "Tienda digital completa",
       features: [
         "E-commerce autogestionable",
-        "Integración de plataformas de pago y métodos de envío",
+        "Integración MercadoPago y métodos de envío",
         "Panel de administración completo",
-        "Hosting premium y soporte técnico"
+        "Hosting premium y soporte técnico",
+        "Tiempo de entrega: 20 días"
       ],
       highlight: "DESDE $65.000",
-      color: "from-purple-500 to-purple-600"
+      color: "from-purple-500 to-purple-600",
+      ctaText: "Ver Detalles E-commerce",
+      ctaLink: "/desarrollo-web/ecommerce"
     }
   ];
 
@@ -81,17 +90,17 @@ export default function Services() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black font-lato text-flaks-dark mb-6">
-            Nuestros <span className="text-flaks-green">Servicios</span>
+            <span className="text-flaks-green">Desarrollo Web</span>
           </h2>
           <p className="text-xl text-gray-600 font-lato max-w-3xl mx-auto">
-            Elegí la solución perfecta para tu negocio. Todos nuestros planes incluyen 
-            soporte técnico, hosting y dominio.
+            Creamos sitios web profesionales que impulsan tu negocio. Todos nuestros planes incluyen
+            hosting, dominio y soporte técnico completo.
           </p>
         </div>
 
-        {/* Main Services Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
-          {services.map((service, index) => {
+        {/* Web Development Plans Grid */}
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          {webDevelopmentPlans.map((service, index) => {
             const Icon = service.icon;
             return (
               <Card 
@@ -140,14 +149,15 @@ export default function Services() {
                     <div className="text-2xl font-black font-lato text-flaks-dark mb-4">
                       {service.highlight}
                     </div>
-                    <Button 
+                    <Button
                       className={`w-full font-lato font-bold py-3 rounded-xl transition-all duration-300 ${
-                        service.featured 
-                          ? 'bg-flaks-green hover:bg-flaks-green-dark text-black' 
+                        service.featured
+                          ? 'bg-flaks-green hover:bg-flaks-green-dark text-black'
                           : 'bg-flaks-dark hover:bg-flaks-dark-secondary text-white'
                       }`}
+                      onClick={() => window.location.href = service.ctaLink}
                     >
-                      Elegir Plan
+                      {service.ctaText}
                     </Button>
                   </div>
                 </CardContent>
@@ -156,30 +166,14 @@ export default function Services() {
           })}
         </div>
 
-        {/* Additional Services */}
-        <div className="bg-flaks-dark rounded-3xl p-8 md:p-12">
-          <h3 className="text-3xl font-black font-lato text-white text-center mb-12">
-            Servicios <span className="text-flaks-green">Adicionales</span>
-          </h3>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {additionalServices.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <div key={index} className="text-center group">
-                  <div className="inline-flex p-4 bg-flaks-green/10 rounded-2xl mb-4 group-hover:bg-flaks-green/20 transition-colors duration-300">
-                    <Icon className="w-8 h-8 text-flaks-green" />
-                  </div>
-                  <h4 className="text-xl font-bold font-lato text-white mb-3">
-                    {service.title}
-                  </h4>
-                  <p className="text-gray-300 font-lato">
-                    {service.description}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
+        {/* CTA Section */}
+        <div className="text-center">
+          <p className="text-gray-600 font-lato mb-6">
+            ¿No encontrás lo que buscás? También desarrollamos proyectos personalizados.
+          </p>
+          <Button variant="outline" className="border-flaks-green text-flaks-green hover:bg-flaks-green hover:text-black font-lato font-bold px-8 py-3 rounded-xl transition-all duration-300">
+            Solicitar Cotización Personalizada
+          </Button>
         </div>
       </div>
     </section>
