@@ -25,7 +25,7 @@ export default function AdvertisingSection() {
         "Reporte semanal de resultados",
         "Optimización cada 15 días"
       ],
-      highlight: "DESDE $15.000/mes + inversión publicitaria",
+      highlight: "",
       color: "from-blue-500 to-cyan-600",
       investment: "$30.000"
     },
@@ -42,7 +42,7 @@ export default function AdvertisingSection() {
         "Optimización continua",
         "A/B testing de creatividades"
       ],
-      highlight: "DESDE $25.000/mes + inversión publicitaria",
+      highlight: "",
       color: "from-flaks-green to-emerald-400",
       featured: true,
       investment: "$60.000"
@@ -61,7 +61,7 @@ export default function AdvertisingSection() {
         "Consultor dedicado",
         "Creatividades premium incluidas"
       ],
-      highlight: "DESDE $45.000/mes + inversión publicitaria",
+      highlight: "",
       color: "from-purple-500 to-violet-600",
       investment: "$100.000+"
     }
@@ -170,7 +170,7 @@ export default function AdvertisingSection() {
                     </p>
                     <div className="bg-flaks-green/10 px-3 py-1 rounded-full">
                       <span className="text-flaks-green font-lato font-bold text-sm">
-                        Inversi��n sugerida: {plan.investment}
+                        Inversión sugerida: {plan.investment}
                       </span>
                     </div>
                   </div>
@@ -198,7 +198,7 @@ export default function AdvertisingSection() {
                           ? 'bg-flaks-green hover:bg-flaks-green-dark text-black' 
                           : 'bg-flaks-dark hover:bg-flaks-dark-secondary text-white'
                       }`}
-                      onClick={() => window.location.href = '/pauta-publicitaria/detalle'}
+      onClick={() => window.location.href = '/pauta-publicitaria'}
                     >
                       Ver Detalles del Plan
                     </Button>

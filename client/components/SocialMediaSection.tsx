@@ -24,7 +24,7 @@ export default function SocialMediaSection() {
         "Programación de contenido",
         "Respuesta a mensajes (horario comercial)"
       ],
-      highlight: "DESDE $18.000/mes",
+      highlight: "",
       color: "from-pink-500 to-purple-600"
     },
     {
@@ -40,7 +40,7 @@ export default function SocialMediaSection() {
         "Community management completo",
         "Estrategia de contenidos personalizada"
       ],
-      highlight: "DESDE $35.000/mes",
+      highlight: "",
       color: "from-flaks-green to-emerald-400",
       featured: true
     },
@@ -57,7 +57,7 @@ export default function SocialMediaSection() {
         "Community management 24/7",
         "Campañas publicitarias básicas incluidas"
       ],
-      highlight: "DESDE $55.000/mes",
+      highlight: "",
       color: "from-blue-500 to-indigo-600"
     }
   ];
@@ -153,7 +153,7 @@ export default function SocialMediaSection() {
                           ? 'bg-flaks-green hover:bg-flaks-green-dark text-black' 
                           : 'bg-flaks-dark hover:bg-flaks-dark-secondary text-white'
                       }`}
-                      onClick={() => window.location.href = '/redes-sociales/detalle'}
+                      onClick={() => window.location.href = '/redes-sociales'}
                     >
                       Ver Detalles del Plan
                     </Button>
