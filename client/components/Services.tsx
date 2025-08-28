@@ -24,10 +24,10 @@ export default function Services() {
         "Formulario de contacto integrado",
         "Tiempo de entrega: 7 días"
       ],
-      highlight: "DESDE $25.000",
+      highlight: "",
       color: "from-blue-500 to-blue-600",
-      ctaText: "Ver Detalles Landing",
-      ctaLink: "/desarrollo-web/landing-page"
+      ctaText: "Ver Detalles",
+      ctaLink: "/desarrollo-web"
     },
     {
       icon: Code,
@@ -41,11 +41,11 @@ export default function Services() {
         "SEO básico incluido",
         "Tiempo de entrega: 15 días"
       ],
-      highlight: "DESDE $45.000",
+      highlight: "",
       color: "from-flaks-green to-emerald-400",
       featured: true,
-      ctaText: "Ver Detalles Corporativa",
-      ctaLink: "/desarrollo-web/web-corporativa"
+      ctaText: "Ver Detalles",
+      ctaLink: "/desarrollo-web"
     },
     {
       icon: ShoppingCart,
@@ -59,10 +59,10 @@ export default function Services() {
         "Hosting premium y soporte técnico",
         "Tiempo de entrega: 20 días"
       ],
-      highlight: "DESDE $65.000",
+      highlight: "",
       color: "from-purple-500 to-purple-600",
-      ctaText: "Ver Detalles E-commerce",
-      ctaLink: "/desarrollo-web/ecommerce"
+      ctaText: "Ver Detalles",
+      ctaLink: "/desarrollo-web"
     }
   ];
 
