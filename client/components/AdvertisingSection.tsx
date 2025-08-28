@@ -189,9 +189,11 @@ export default function AdvertisingSection() {
 
                   {/* Price and CTA */}
                   <div className="text-center">
-                    <div className="text-xl font-black font-lato text-flaks-dark mb-4">
-                      {plan.highlight}
-                    </div>
+                    {plan.highlight && (
+                      <div className="text-xl font-black font-lato text-flaks-dark mb-4">
+                        {plan.highlight}
+                      </div>
+                    )}
                     <Button 
                       className={`w-full font-lato font-bold py-3 rounded-xl transition-all duration-300 ${
                         plan.featured 

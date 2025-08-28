@@ -146,9 +146,11 @@ export default function Services() {
 
                   {/* Price and CTA */}
                   <div className="text-center">
-                    <div className="text-2xl font-black font-lato text-flaks-dark mb-4">
-                      {service.highlight}
-                    </div>
+                    {service.highlight && (
+                      <div className="text-2xl font-black font-lato text-flaks-dark mb-4">
+                        {service.highlight}
+                      </div>
+                    )}
                     <Button
                       className={`w-full font-lato font-bold py-3 rounded-xl transition-all duration-300 ${
                         service.featured
