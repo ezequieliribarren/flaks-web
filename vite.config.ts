@@ -49,19 +49,11 @@ export default defineConfig(({ mode }) => ({
         lpB: resolve(__dirname, "lp/landing-b/index.html"),
         gracias: resolve(__dirname, "gracias/index.html"),
       },
-      output: {
-        manualChunks(id) {
-          if (id.includes("node_modules")) {
-            if (id.includes("react") || id.includes("scheduler")) return "vendor-react";
-            if (id.includes("lucide-react")) return "vendor-icons";
-            return "vendor";
-          }
-        },
-      },
     },
   },
   plugins: [react(), folderIndexRedirect(), stubLucideChrome()],
   resolve: {
+    dedupe: ["react", "react-dom"],
     alias: [
       { find: "@", replacement: path.resolve(__dirname, "./client") },
       { find: "@shared", replacement: path.resolve(__dirname, "./shared") },
