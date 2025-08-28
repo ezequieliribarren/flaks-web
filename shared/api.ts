@@ -10,3 +10,24 @@
 export interface DemoResponse {
   message: string;
 }
+
+/**
+ * Contact form types (shared between client and server)
+ */
+export type ContactService =
+  | "Desarrollo web"
+  | "Gestión de Redes Sociales"
+  | "Pauta publicitaria";
+
+export interface ContactRequest {
+  name: string;
+  email: string;
+  phone: string;
+  service: ContactService;
+  page?: string;
+}
+
+export interface ContactResponse {
+  ok: boolean;
+  error?: string;
+}

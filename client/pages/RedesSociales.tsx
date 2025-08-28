@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ContactForm from "../../components/ContactForm";
 import {
   Instagram,
   Facebook,
@@ -399,6 +400,18 @@ export default function RedesSociales() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-20 bg-gradient-to-br from-flaks-gradient-start to-flaks-gradient-end">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-black font-lato text-white">
+              Contactanos <span className="text-flaks-green">ahora</span>
+            </h2>
+          </div>
+          <ContactForm />
         </div>
       </section>
 

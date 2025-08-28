@@ -10,6 +10,7 @@ import {
   Users,
   CheckCircle,
 } from "lucide-react";
+import ContactForm from "../../components/ContactForm";
 
 export default function Contact() {
   const contactMethods = [
@@ -150,6 +151,18 @@ export default function Contact() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Contact Form */}
+      <section className="py-20 bg-gradient-to-br from-flaks-gradient-start to-flaks-gradient-end">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-black font-lato text-white">
+              Enviá tu consulta <span className="text-flaks-green">ahora</span>
+            </h2>
+          </div>
+          <ContactForm />
         </div>
       </section>
 
