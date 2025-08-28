@@ -1,7 +1,8 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
-import Benefits from "@/components/Benefits";
+import SocialMediaSection from "@/components/SocialMediaSection";
+import AdvertisingSection from "@/components/AdvertisingSection";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -11,7 +12,8 @@ export default function Index() {
       <Header />
       <Hero />
       <Services />
-      <Benefits />
+      <SocialMediaSection />
+      <AdvertisingSection />
       <Contact />
       <Footer />
     </div>

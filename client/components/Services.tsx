@@ -85,7 +85,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="servicios" className="py-20 bg-white">
+    <section id="desarrollo-web" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
