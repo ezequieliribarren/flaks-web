@@ -6,9 +6,9 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
-    { name: "Desarrollo Web", href: "#desarrollo-web" },
-    { name: "Redes Sociales", href: "#redes-sociales" },
-    { name: "Pauta Publicitaria", href: "#pauta-publicitaria" },
+    { name: "Desarrollo Web", href: "/desarrollo-web" },
+    { name: "Redes Sociales", href: "/redes-sociales" },
+    { name: "Pauta Publicitaria", href: "/pauta-publicitaria" },
     { name: "Contacto", href: "#contacto" },
   ];
 

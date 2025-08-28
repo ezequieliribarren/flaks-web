@@ -32,7 +32,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-flaks-dark border-t border-flaks-gray-dark/50">
+    <footer className="bg-gradient-to-br from-flaks-gradient-start to-flaks-gradient-end border-t border-flaks-gray-dark/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-4 gap-8 py-16">

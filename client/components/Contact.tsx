@@ -111,7 +111,7 @@ export default function Contact() {
             </div>
 
             {/* Right: Process Steps */}
-            <div className="bg-flaks-dark rounded-3xl p-8">
+            <div className="bg-gradient-to-br from-flaks-gradient-start to-flaks-gradient-end rounded-3xl p-8">
               <h3 className="text-2xl font-bold font-lato text-white mb-8">
                 Nuestro proceso es <span className="text-flaks-green">simple</span>
               </h3>
