@@ -18,9 +18,9 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <div className="text-2xl font-black font-lato text-flaks-green">
-              FLAKS
-            </div>
+            <a href="/" aria-label="FLAKS" className="flex items-center">
+              <img src="/logo.svg" alt="FLAKS" className="h-7 w-auto" />
+            </a>
           </div>
 
           {/* Desktop Navigation */}

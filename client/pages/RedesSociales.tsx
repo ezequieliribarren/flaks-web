@@ -344,7 +344,7 @@ export default function RedesSociales() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-black font-lato text-flaks-dark mb-6">
               ¿Qué incluye nuestro{" "}
-              <span className="text-flaks-green">servicio</span>?
+              <span className="text-flaks-dark-secondary">servicio</span>?
             </h2>
           </div>
 
@@ -377,7 +377,7 @@ export default function RedesSociales() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-black font-lato text-flaks-dark mb-6">
-              Nuestro <span className="text-flaks-green">Proceso</span>
+              Nuestro <span className="text-flaks-dark-secondary">Proceso</span>
             </h2>
             <p className="text-xl text-gray-600 font-lato max-w-3xl mx-auto">
               Te acompañamos paso a paso para hacer crecer tu presencia en redes
