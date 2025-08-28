@@ -47,6 +47,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        flaks: {
+          green: "#00FF7F",
+          "green-dark": "#00E066",
+          "green-light": "#33FF99",
+          dark: "#0A0A0A",
+          "dark-secondary": "#1A1A1A",
+          "gray-dark": "#2A2A2A",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -62,6 +70,9 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        'lato': ['Lato', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {
