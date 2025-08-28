@@ -28,7 +28,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    outDir: "dist/spa",
+    outDir: "dist",
     rollupOptions: {
       input: {
         home: resolve(__dirname, "index.html"),
@@ -42,7 +42,7 @@ export default defineConfig(({ mode }) => ({
       },
     },
   },
-  plugins: [react(), folderIndexRedirect()],
+  plugins: [react(), folderIndexRedirect(), stubLucideChrome()],
   resolve: {
     alias: [
       { find: "@", replacement: path.resolve(__dirname, "./client") },
@@ -99,6 +99,31 @@ function folderIndexRedirect(): Plugin {
         } catch {}
         next();
       });
+    },
+  };
+}
+
+function stubLucideChrome(): Plugin {
+  const VIRTUAL_ID = "\0lucide-chrome-stub";
+  const isLucideImporter = (importer?: string) =>
+    !!importer && /node_modules[\\\/]lucide-react[\\\/]dist[\\\/]esm/.test(importer);
+  return {
+    name: "stub-lucide-chrome-build",
+    enforce: "pre",
+    resolveId(id, importer) {
+      // Intercept relative imports to the chrome icon inside lucide-react
+      if (isLucideImporter(importer)) {
+        if (id === "./icons/chrome.js" || id === "./chrome.js" || /(^|[\\\/])chrome\.js$/.test(id)) {
+          return VIRTUAL_ID;
+        }
+      }
+      return null;
+    },
+    load(id) {
+      if (id === VIRTUAL_ID) {
+        return "export default function Icon(){return null};";
+      }
+      return null;
     },
   };
 }
