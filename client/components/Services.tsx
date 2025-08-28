@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { 
-  Globe, 
-  ShoppingCart, 
-  Rocket, 
-  Code, 
-  Search, 
+import {
+  Globe,
+  ShoppingCart,
+  Rocket,
+  Code,
+  Search,
   Headphones,
-  CheckCircle
+  CheckCircle,
 } from "lucide-react";
 
 export default function Services() {
@@ -22,12 +22,12 @@ export default function Services() {
         "Hosting, dominio .com.ar y SSL",
         "Optimizada para móviles",
         "Formulario de contacto integrado",
-        "Tiempo de entrega: 7 días"
+        "Tiempo de entrega: 7 días",
       ],
       highlight: "",
       color: "from-blue-500 to-blue-600",
       ctaText: "Ver Detalles",
-      ctaLink: "/desarrollo-web"
+      ctaLink: "/desarrollo-web",
     },
     {
       icon: Code,
@@ -39,13 +39,13 @@ export default function Services() {
         "Hosting, dominio .com.ar y SSL",
         "Panel de administración CMS",
         "SEO básico incluido",
-        "Tiempo de entrega: 15 días"
+        "Tiempo de entrega: 15 días",
       ],
       highlight: "",
       color: "from-flaks-green to-emerald-400",
       featured: true,
       ctaText: "Ver Detalles",
-      ctaLink: "/desarrollo-web"
+      ctaLink: "/desarrollo-web",
     },
     {
       icon: ShoppingCart,
@@ -57,31 +57,31 @@ export default function Services() {
         "Integración MercadoPago y métodos de envío",
         "Panel de administración completo",
         "Hosting premium y soporte técnico",
-        "Tiempo de entrega: 20 días"
+        "Tiempo de entrega: 20 días",
       ],
       highlight: "",
       color: "from-purple-500 to-purple-600",
       ctaText: "Ver Detalles",
-      ctaLink: "/desarrollo-web"
-    }
+      ctaLink: "/desarrollo-web",
+    },
   ];
 
   const additionalServices = [
     {
       icon: Search,
       title: "Más visibilidad en Google",
-      description: "Posicionamiento SEO y estrategias de marketing digital"
+      description: "Posicionamiento SEO y estrategias de marketing digital",
     },
     {
       icon: Code,
       title: "Desarrollo personalizado",
-      description: "Soluciones web a medida para necesidades específicas"
+      description: "Soluciones web a medida para necesidades específicas",
     },
     {
       icon: Headphones,
       title: "Asesoramiento personalizado",
-      description: "Te acompañamos en cada etapa del crecimiento digital"
-    }
+      description: "Te acompañamos en cada etapa del crecimiento digital",
+    },
   ];
 
   return (
@@ -93,8 +93,9 @@ export default function Services() {
             <span className="text-flaks-green">Desarrollo Web</span>
           </h2>
           <p className="text-xl text-gray-600 font-lato max-w-3xl mx-auto">
-            Creamos sitios web profesionales que impulsan tu negocio. Todos nuestros planes incluyen
-            hosting, dominio y soporte técnico completo.
+            Creamos sitios web profesionales que impulsan tu negocio. Todos
+            nuestros planes incluyen hosting, dominio y soporte técnico
+            completo.
           </p>
         </div>
 
@@ -103,10 +104,10 @@ export default function Services() {
           {webDevelopmentPlans.map((service, index) => {
             const Icon = service.icon;
             return (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className={`relative overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
-                  service.featured ? 'ring-2 ring-flaks-green shadow-2xl' : ''
+                  service.featured ? "ring-2 ring-flaks-green shadow-2xl" : ""
                 }`}
               >
                 {service.featured && (
@@ -114,11 +115,13 @@ export default function Services() {
                     MÁS POPULAR
                   </div>
                 )}
-                
+
                 <CardContent className="p-8 h-full flex flex-col">
                   {/* Icon and Header */}
                   <div className="text-center mb-6">
-                    <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${service.color} mb-4`}>
+                    <div
+                      className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${service.color} mb-4`}
+                    >
                       <Icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-2xl font-black font-lato text-flaks-dark mb-2">
@@ -138,7 +141,9 @@ export default function Services() {
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start">
                           <CheckCircle className="w-5 h-5 text-flaks-green mt-0.5 mr-3 flex-shrink-0" />
-                          <span className="text-gray-700 font-lato">{feature}</span>
+                          <span className="text-gray-700 font-lato">
+                            {feature}
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -154,10 +159,10 @@ export default function Services() {
                     <Button
                       className={`w-full font-lato font-bold py-3 rounded-xl transition-all duration-300 ${
                         service.featured
-                          ? 'bg-flaks-green hover:bg-flaks-green-dark text-black'
-                          : 'bg-flaks-dark hover:bg-flaks-dark-secondary text-white'
+                          ? "bg-flaks-green hover:bg-flaks-green-dark text-black"
+                          : "bg-flaks-dark hover:bg-flaks-dark-secondary text-white"
                       }`}
-                      onClick={() => window.location.href = service.ctaLink}
+                      onClick={() => (window.location.href = service.ctaLink)}
                     >
                       {service.ctaText}
                     </Button>
@@ -171,9 +176,13 @@ export default function Services() {
         {/* CTA Section */}
         <div className="text-center">
           <p className="text-gray-600 font-lato mb-6">
-            ¿No encontrás lo que buscás? También desarrollamos proyectos personalizados.
+            ¿No encontrás lo que buscás? También desarrollamos proyectos
+            personalizados.
           </p>
-          <Button variant="outline" className="border-flaks-green text-flaks-green hover:bg-flaks-green hover:text-black font-lato font-bold px-8 py-3 rounded-xl transition-all duration-300">
+          <Button
+            variant="outline"
+            className="border-flaks-green text-flaks-green hover:bg-flaks-green hover:text-black font-lato font-bold px-8 py-3 rounded-xl transition-all duration-300"
+          >
             Solicitar Cotización Personalizada
           </Button>
         </div>

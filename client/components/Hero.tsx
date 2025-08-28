@@ -38,7 +38,8 @@ export default function Hero() {
 
             {/* Subtitle */}
             <p className="text-xl text-gray-300 font-lato font-light leading-relaxed max-w-lg">
-              Desarrollamos sitios web, gestionamos redes sociales y creamos campañas publicitarias que hacen crecer tu negocio.
+              Desarrollamos sitios web, gestionamos redes sociales y creamos
+              campañas publicitarias que hacen crecer tu negocio.
             </p>
 
             {/* CTA Buttons */}
@@ -47,7 +48,10 @@ export default function Hero() {
                 ¡Empecemos Ahora!
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button variant="outline" className="border-flaks-green text-flaks-green hover:bg-flaks-green hover:text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300">
+              <Button
+                variant="outline"
+                className="border-flaks-green text-flaks-green hover:bg-flaks-green hover:text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300"
+              >
                 Ver Servicios
               </Button>
             </div>
@@ -55,15 +59,25 @@ export default function Hero() {
             {/* Quick Stats */}
             <div className="flex gap-8 pt-4">
               <div>
-                <div className="text-2xl font-black font-lato text-flaks-green">16K+</div>
-                <div className="text-sm text-gray-400 font-lato">Sitios creados</div>
+                <div className="text-2xl font-black font-lato text-flaks-green">
+                  16K+
+                </div>
+                <div className="text-sm text-gray-400 font-lato">
+                  Sitios creados
+                </div>
               </div>
               <div>
-                <div className="text-2xl font-black font-lato text-flaks-green">50+</div>
-                <div className="text-sm text-gray-400 font-lato">Años experiencia</div>
+                <div className="text-2xl font-black font-lato text-flaks-green">
+                  50+
+                </div>
+                <div className="text-sm text-gray-400 font-lato">
+                  Años experiencia
+                </div>
               </div>
               <div>
-                <div className="text-2xl font-black font-lato text-flaks-green">24/7</div>
+                <div className="text-2xl font-black font-lato text-flaks-green">
+                  24/7
+                </div>
                 <div className="text-sm text-gray-400 font-lato">Soporte</div>
               </div>
             </div>

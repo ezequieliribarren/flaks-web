@@ -2,17 +2,17 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { 
-  Globe, 
-  Code, 
-  ShoppingCart, 
-  CheckCircle, 
-  ArrowRight, 
-  Clock, 
-  Shield, 
+import {
+  Globe,
+  Code,
+  ShoppingCart,
+  CheckCircle,
+  ArrowRight,
+  Clock,
+  Shield,
   Smartphone,
   Search,
-  Zap
+  Zap,
 } from "lucide-react";
 
 export default function DesarrolloWeb() {
@@ -29,9 +29,9 @@ export default function DesarrolloWeb() {
         "Formulario de contacto integrado",
         "Tiempo de entrega: 7 días hábiles",
         "Certificado de seguridad SSL",
-        "Optimización básica de velocidad"
+        "Optimización básica de velocidad",
       ],
-      color: "from-blue-500 to-blue-600"
+      color: "from-blue-500 to-blue-600",
     },
     {
       icon: Code,
@@ -45,10 +45,10 @@ export default function DesarrolloWeb() {
         "SEO básico y optimización Google",
         "Integración con redes sociales",
         "Formularios de contacto avanzados",
-        "Tiempo de entrega: 15 días hábiles"
+        "Tiempo de entrega: 15 días hábiles",
       ],
       color: "from-flaks-green to-emerald-400",
-      featured: true
+      featured: true,
     },
     {
       icon: ShoppingCart,
@@ -62,62 +62,62 @@ export default function DesarrolloWeb() {
         "Gestión de productos e inventario",
         "Integración con métodos de envío",
         "Hosting premium y soporte técnico",
-        "Tiempo de entrega: 20 días hábiles"
+        "Tiempo de entrega: 20 días hábiles",
       ],
-      color: "from-purple-500 to-purple-600"
-    }
+      color: "from-purple-500 to-purple-600",
+    },
   ];
 
   const benefits = [
     {
       icon: Shield,
       title: "Seguridad Garantizada",
-      description: "SSL gratuito y hosting seguro incluido"
+      description: "SSL gratuito y hosting seguro incluido",
     },
     {
       icon: Smartphone,
       title: "Diseño Responsive",
-      description: "Perfecto en móviles, tablets y escritorio"
+      description: "Perfecto en móviles, tablets y escritorio",
     },
     {
       icon: Search,
       title: "SEO Optimizado",
-      description: "Optimizado para aparecer en Google"
+      description: "Optimizado para aparecer en Google",
     },
     {
       icon: Clock,
       title: "Entrega Rápida",
-      description: "Tiempos de entrega garantizados"
-    }
+      description: "Tiempos de entrega garantizados",
+    },
   ];
 
   const process = [
     {
       number: "01",
       title: "Consulta y Planificación",
-      description: "Analizamos tu negocio y definimos objetivos"
+      description: "Analizamos tu negocio y definimos objetivos",
     },
     {
-      number: "02", 
+      number: "02",
       title: "Diseño y Desarrollo",
-      description: "Creamos tu sitio con la mejor tecnología"
+      description: "Creamos tu sitio con la mejor tecnología",
     },
     {
       number: "03",
       title: "Pruebas y Lanzamiento",
-      description: "Revisamos todo y publicamos tu sitio"
+      description: "Revisamos todo y publicamos tu sitio",
     },
     {
       number: "04",
       title: "Soporte Continuo",
-      description: "Te acompañamos después del lanzamiento"
-    }
+      description: "Te acompañamos después del lanzamiento",
+    },
   ];
 
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-flaks-gradient-start to-flaks-gradient-end py-20 overflow-hidden">
         {/* Background Effects */}
@@ -134,14 +134,16 @@ export default function DesarrolloWeb() {
                 <Code className="w-4 h-4 mr-2" />
                 Desarrollo Web Profesional
               </div>
-              
+
               <h1 className="text-4xl md:text-5xl font-black font-lato text-white mb-6 leading-tight">
-                Creamos tu <span className="text-flaks-green">página web</span> que impulsa tu negocio
+                Creamos tu <span className="text-flaks-green">página web</span>{" "}
+                que impulsa tu negocio
               </h1>
-              
+
               <p className="text-xl text-gray-300 font-lato mb-8 leading-relaxed">
-                Desde landing pages hasta e-commerce completos. Desarrollamos sitios web que 
-                generan confianza, atraen clientes y están disponibles 24/7.
+                Desde landing pages hasta e-commerce completos. Desarrollamos
+                sitios web que generan confianza, atraen clientes y están
+                disponibles 24/7.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -149,7 +151,10 @@ export default function DesarrolloWeb() {
                   Ver Nuestros Planes
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-                <Button variant="outline" className="border-flaks-green text-flaks-green hover:bg-flaks-green hover:text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300">
+                <Button
+                  variant="outline"
+                  className="border-flaks-green text-flaks-green hover:bg-flaks-green hover:text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300"
+                >
                   Solicitar Presupuesto
                 </Button>
               </div>
@@ -178,10 +183,11 @@ export default function DesarrolloWeb() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-black font-lato text-flaks-dark mb-4">
-              ¿Por qué elegir nuestro <span className="text-flaks-green">desarrollo web</span>?
+              ¿Por qué elegir nuestro{" "}
+              <span className="text-flaks-green">desarrollo web</span>?
             </h2>
           </div>
-          
+
           <div className="grid md:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
@@ -211,7 +217,8 @@ export default function DesarrolloWeb() {
               Nuestros <span className="text-flaks-green">Planes</span>
             </h2>
             <p className="text-xl text-gray-600 font-lato max-w-3xl mx-auto">
-              Elegí la solución perfecta para tu negocio. Todos incluyen hosting, dominio y soporte técnico.
+              Elegí la solución perfecta para tu negocio. Todos incluyen
+              hosting, dominio y soporte técnico.
             </p>
           </div>
 
@@ -219,10 +226,10 @@ export default function DesarrolloWeb() {
             {plans.map((plan, index) => {
               const Icon = plan.icon;
               return (
-                <Card 
-                  key={index} 
+                <Card
+                  key={index}
                   className={`relative overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
-                    plan.featured ? 'ring-2 ring-flaks-green shadow-2xl' : ''
+                    plan.featured ? "ring-2 ring-flaks-green shadow-2xl" : ""
                   }`}
                 >
                   {plan.featured && (
@@ -230,10 +237,12 @@ export default function DesarrolloWeb() {
                       MÁS POPULAR
                     </div>
                   )}
-                  
+
                   <CardContent className="p-8 h-full flex flex-col">
                     <div className="text-center mb-6">
-                      <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${plan.color} mb-4`}>
+                      <div
+                        className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${plan.color} mb-4`}
+                      >
                         <Icon className="w-8 h-8 text-white" />
                       </div>
                       <h3 className="text-2xl font-black font-lato text-flaks-dark mb-2">
@@ -252,18 +261,20 @@ export default function DesarrolloWeb() {
                         {plan.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-start">
                             <CheckCircle className="w-5 h-5 text-flaks-green mt-0.5 mr-3 flex-shrink-0" />
-                            <span className="text-gray-700 font-lato">{feature}</span>
+                            <span className="text-gray-700 font-lato">
+                              {feature}
+                            </span>
                           </li>
                         ))}
                       </ul>
                     </div>
 
                     <div className="text-center">
-                      <Button 
+                      <Button
                         className={`w-full font-lato font-bold py-3 rounded-xl transition-all duration-300 ${
-                          plan.featured 
-                            ? 'bg-flaks-green hover:bg-flaks-green-dark text-black' 
-                            : 'bg-flaks-dark hover:bg-flaks-dark-secondary text-white'
+                          plan.featured
+                            ? "bg-flaks-green hover:bg-flaks-green-dark text-black"
+                            : "bg-flaks-dark hover:bg-flaks-dark-secondary text-white"
                         }`}
                       >
                         Solicitar Presupuesto
@@ -285,7 +296,8 @@ export default function DesarrolloWeb() {
               Nuestro <span className="text-flaks-green">Proceso</span>
             </h2>
             <p className="text-xl text-gray-600 font-lato max-w-3xl mx-auto">
-              Te acompañamos paso a paso hasta tener tu sitio web online y funcionando.
+              Te acompañamos paso a paso hasta tener tu sitio web online y
+              funcionando.
             </p>
           </div>
 
@@ -300,9 +312,7 @@ export default function DesarrolloWeb() {
                 <h3 className="text-xl font-bold font-lato text-flaks-dark mb-3">
                   {step.title}
                 </h3>
-                <p className="text-gray-600 font-lato">
-                  {step.description}
-                </p>
+                <p className="text-gray-600 font-lato">{step.description}</p>
               </div>
             ))}
           </div>
@@ -313,18 +323,23 @@ export default function DesarrolloWeb() {
       <section className="py-20 bg-gradient-to-br from-flaks-gradient-start to-flaks-gradient-end">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black font-lato text-white mb-6">
-            ¿Listo para tener tu <span className="text-flaks-green">sitio web</span>?
+            ¿Listo para tener tu{" "}
+            <span className="text-flaks-green">sitio web</span>?
           </h2>
           <p className="text-xl text-gray-300 font-lato mb-8 max-w-3xl mx-auto">
-            Contanos sobre tu proyecto y te enviamos un presupuesto personalizado en 24hs.
+            Contanos sobre tu proyecto y te enviamos un presupuesto
+            personalizado en 24hs.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-flaks-green hover:bg-flaks-green-dark text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300 transform hover:scale-105">
               Contactar por WhatsApp
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button variant="outline" className="border-flaks-green text-flaks-green hover:bg-flaks-green hover:text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300">
+            <Button
+              variant="outline"
+              className="border-flaks-green text-flaks-green hover:bg-flaks-green hover:text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300"
+            >
               Solicitar Presupuesto
             </Button>
           </div>

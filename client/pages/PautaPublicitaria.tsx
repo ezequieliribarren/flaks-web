@@ -2,9 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { 
-  Target, 
-  BarChart, 
+import {
+  Target,
+  BarChart,
   TrendingUp,
   DollarSign,
   Users,
@@ -18,7 +18,7 @@ import {
   MessageSquare,
   PlayCircle,
   Settings,
-  Activity
+  Activity,
 } from "lucide-react";
 
 export default function PautaPublicitaria() {
@@ -27,125 +27,144 @@ export default function PautaPublicitaria() {
       icon: Search,
       name: "Google Ads",
       description: "Aparece en las búsquedas cuando tus clientes te buscan",
-      features: ["Búsquedas", "Display", "Shopping", "YouTube"]
+      features: ["Búsquedas", "Display", "Shopping", "YouTube"],
     },
     {
       icon: Users,
       name: "Meta Ads",
       description: "Conecta con tu audiencia en Facebook e Instagram",
-      features: ["Feed", "Stories", "Reels", "Marketplace"]
+      features: ["Feed", "Stories", "Reels", "Marketplace"],
     },
     {
       icon: PlayCircle,
       name: "YouTube Ads",
       description: "Campañas de video que capturan la atención",
-      features: ["Video ads", "Bumper ads", "Discovery", "Shorts"]
+      features: ["Video ads", "Bumper ads", "Discovery", "Shorts"],
     },
     {
       icon: MessageSquare,
       name: "LinkedIn Ads",
       description: "Llegá a profesionales y decisores en B2B",
-      features: ["Sponsored Content", "Message Ads", "Dynamic Ads", "Lead Gen"]
-    }
+      features: ["Sponsored Content", "Message Ads", "Dynamic Ads", "Lead Gen"],
+    },
   ];
 
   const services = [
     {
       icon: Target,
       title: "Segmentación Precisa",
-      description: "Identificamos y llegamos exactamente a tu audiencia ideal usando datos demográficos, intereses y comportamientos específicos.",
+      description:
+        "Identificamos y llegamos exactamente a tu audiencia ideal usando datos demográficos, intereses y comportamientos específicos.",
       details: [
         "Análisis de audiencia objetivo",
         "Segmentación por edad, ubicación e intereses",
         "Lookalike audiences",
-        "Retargeting de visitantes web"
-      ]
+        "Retargeting de visitantes web",
+      ],
     },
     {
       icon: BarChart,
       title: "Gestión de Campañas",
-      description: "Creamos, monitoreamos y optimizamos tus campañas publicitarias para maximizar el retorno de tu inversión.",
+      description:
+        "Creamos, monitoreamos y optimizamos tus campañas publicitarias para maximizar el retorno de tu inversión.",
       details: [
         "Configuración completa de campañas",
         "Monitoreo en tiempo real",
         "Optimización continua de rendimiento",
-        "A/B testing de creatividades"
-      ]
+        "A/B testing de creatividades",
+      ],
     },
     {
       icon: TrendingUp,
       title: "Optimización de Resultados",
-      description: "Analizamos métricas clave y ajustamos estrategias para mejorar continuamente el rendimiento de tus anuncios.",
+      description:
+        "Analizamos métricas clave y ajustamos estrategias para mejorar continuamente el rendimiento de tus anuncios.",
       details: [
         "Análisis de métricas clave (CTR, CPC, ROAS)",
         "Optimización de presupuestos",
         "Mejora de creatividades",
-        "Reportes detallados semanales"
-      ]
-    }
+        "Reportes detallados semanales",
+      ],
+    },
   ];
 
   const benefits = [
     {
       icon: Eye,
       title: "Mayor Visibilidad",
-      description: "Tu marca aparece donde están tus clientes potenciales"
+      description: "Tu marca aparece donde están tus clientes potenciales",
     },
     {
       icon: MousePointer,
       title: "Resultados Medibles",
-      description: "Cada peso invertido es trackeable y optimizable"
+      description: "Cada peso invertido es trackeable y optimizable",
     },
     {
       icon: DollarSign,
       title: "Control de Presupuesto",
-      description: "Vos decidís cuánto invertir y nosotros lo optimizamos"
+      description: "Vos decidís cuánto invertir y nosotros lo optimizamos",
     },
     {
       icon: Zap,
       title: "Resultados Rápidos",
-      description: "Comenzás a ver resultados desde el primer día"
-    }
+      description: "Comenzás a ver resultados desde el primer día",
+    },
   ];
 
   const process = [
     {
       number: "01",
       title: "Análisis y Estrategia",
-      description: "Estudiamos tu negocio, competencia y audiencia para crear la estrategia perfecta.",
-      icon: Target
+      description:
+        "Estudiamos tu negocio, competencia y audiencia para crear la estrategia perfecta.",
+      icon: Target,
     },
     {
-      number: "02", 
+      number: "02",
       title: "Configuración de Campañas",
-      description: "Creamos y configuramos tus campañas en las plataformas más efectivas para tu negocio.",
-      icon: Settings
+      description:
+        "Creamos y configuramos tus campañas en las plataformas más efectivas para tu negocio.",
+      icon: Settings,
     },
     {
       number: "03",
       title: "Lanzamiento y Monitoreo",
-      description: "Lanzamos las campañas y monitoreamos su rendimiento en tiempo real.",
-      icon: Activity
+      description:
+        "Lanzamos las campañas y monitoreamos su rendimiento en tiempo real.",
+      icon: Activity,
     },
     {
       number: "04",
       title: "Optimización Continua",
-      description: "Analizamos resultados y optimizamos constantemente para mejorar el ROI.",
-      icon: TrendingUp
-    }
+      description:
+        "Analizamos resultados y optimizamos constantemente para mejorar el ROI.",
+      icon: TrendingUp,
+    },
   ];
 
   const metrics = [
-    { label: "ROI Promedio", value: "300%", description: "Retorno de inversión" },
+    {
+      label: "ROI Promedio",
+      value: "300%",
+      description: "Retorno de inversión",
+    },
     { label: "CTR Promedio", value: "2.5%", description: "Click-through rate" },
-    { label: "Campañas Activas", value: "150+", description: "Gestionadas mensualmente" },
-    { label: "Inversión Gestionada", value: "$5M+", description: "En publicidad digital" }
+    {
+      label: "Campañas Activas",
+      value: "150+",
+      description: "Gestionadas mensualmente",
+    },
+    {
+      label: "Inversión Gestionada",
+      value: "$5M+",
+      description: "En publicidad digital",
+    },
   ];
 
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-flaks-gradient-start to-flaks-gradient-end py-20 overflow-hidden">
         {/* Background Effects */}
@@ -162,14 +181,17 @@ export default function PautaPublicitaria() {
                 <Target className="w-4 h-4 mr-2" />
                 Publicidad Digital Estratégica
               </div>
-              
+
               <h1 className="text-4xl md:text-5xl font-black font-lato text-white mb-6 leading-tight">
-                Convertimos tu <span className="text-flaks-green">inversión publicitaria</span> en resultados reales
+                Convertimos tu{" "}
+                <span className="text-flaks-green">inversión publicitaria</span>{" "}
+                en resultados reales
               </h1>
-              
+
               <p className="text-xl text-gray-300 font-lato mb-8 leading-relaxed">
-                Gestionamos tus campañas en Google Ads, Facebook, Instagram y otras plataformas 
-                para maximizar tu retorno de inversión y hacer crecer tu negocio.
+                Gestionamos tus campañas en Google Ads, Facebook, Instagram y
+                otras plataformas para maximizar tu retorno de inversión y hacer
+                crecer tu negocio.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -177,7 +199,10 @@ export default function PautaPublicitaria() {
                   Solicitar Auditoría Gratuita
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-                <Button variant="outline" className="border-flaks-green text-flaks-green hover:bg-flaks-green hover:text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300">
+                <Button
+                  variant="outline"
+                  className="border-flaks-green text-flaks-green hover:bg-flaks-green hover:text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300"
+                >
                   Ver Casos de Éxito
                 </Button>
               </div>
@@ -219,10 +244,12 @@ export default function PautaPublicitaria() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-black font-lato text-flaks-dark mb-4">
-              Resultados que <span className="text-flaks-green">demuestran</span> nuestra experiencia
+              Resultados que{" "}
+              <span className="text-flaks-green">demuestran</span> nuestra
+              experiencia
             </h2>
           </div>
-          
+
           <div className="grid md:grid-cols-4 gap-8">
             {metrics.map((metric, index) => (
               <div key={index} className="text-center">
@@ -246,10 +273,12 @@ export default function PautaPublicitaria() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black font-lato text-flaks-dark mb-6">
-              Plataformas que <span className="text-flaks-green">dominamos</span>
+              Plataformas que{" "}
+              <span className="text-flaks-green">dominamos</span>
             </h2>
             <p className="text-xl text-gray-600 font-lato max-w-3xl mx-auto">
-              Trabajamos en las principales plataformas publicitarias para llegar a tu audiencia donde sea que esté.
+              Trabajamos en las principales plataformas publicitarias para
+              llegar a tu audiencia donde sea que esté.
             </p>
           </div>
 
@@ -257,7 +286,10 @@ export default function PautaPublicitaria() {
             {platforms.map((platform, index) => {
               const Icon = platform.icon;
               return (
-                <Card key={index} className="h-full hover:shadow-lg transition-shadow duration-300">
+                <Card
+                  key={index}
+                  className="h-full hover:shadow-lg transition-shadow duration-300"
+                >
                   <CardContent className="p-6 text-center h-full flex flex-col">
                     <div className="inline-flex p-4 bg-flaks-green/10 rounded-2xl mb-4">
                       <Icon className="w-8 h-8 text-flaks-green" />
@@ -270,7 +302,10 @@ export default function PautaPublicitaria() {
                     </p>
                     <div className="space-y-1">
                       {platform.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="text-sm text-flaks-green font-lato font-medium">
+                        <div
+                          key={featureIndex}
+                          className="text-sm text-flaks-green font-lato font-medium"
+                        >
                           {feature}
                         </div>
                       ))}
@@ -291,7 +326,8 @@ export default function PautaPublicitaria() {
               Nuestros <span className="text-flaks-green">Servicios</span>
             </h2>
             <p className="text-xl text-gray-600 font-lato max-w-3xl mx-auto">
-              Ofrecemos un servicio integral de publicidad digital que abarca desde la estrategia hasta la optimización continua.
+              Ofrecemos un servicio integral de publicidad digital que abarca
+              desde la estrategia hasta la optimización continua.
             </p>
           </div>
 
@@ -299,8 +335,11 @@ export default function PautaPublicitaria() {
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <div key={index} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
-                  <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
+                <div
+                  key={index}
+                  className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}
+                >
+                  <div className={index % 2 === 1 ? "lg:col-start-2" : ""}>
                     <div className="inline-flex p-4 bg-flaks-green/10 rounded-2xl mb-6">
                       <Icon className="w-10 h-10 text-flaks-green" />
                     </div>
@@ -314,12 +353,14 @@ export default function PautaPublicitaria() {
                       {service.details.map((detail, detailIndex) => (
                         <li key={detailIndex} className="flex items-start">
                           <div className="w-2 h-2 bg-flaks-green rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                          <span className="text-gray-700 font-lato">{detail}</span>
+                          <span className="text-gray-700 font-lato">
+                            {detail}
+                          </span>
                         </li>
                       ))}
                     </ul>
                   </div>
-                  <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
+                  <div className={index % 2 === 1 ? "lg:col-start-1" : ""}>
                     <div className="bg-white p-8 rounded-3xl shadow-lg">
                       <div className="aspect-square bg-gradient-to-br from-flaks-green/20 to-flaks-green/5 rounded-2xl flex items-center justify-center">
                         <Icon className="w-24 h-24 text-flaks-green" />
@@ -338,7 +379,8 @@ export default function PautaPublicitaria() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-black font-lato text-flaks-dark mb-6">
-              Beneficios de la <span className="text-flaks-green">publicidad digital</span>
+              Beneficios de la{" "}
+              <span className="text-flaks-green">publicidad digital</span>
             </h2>
           </div>
 
@@ -371,7 +413,8 @@ export default function PautaPublicitaria() {
               Nuestro <span className="text-flaks-green">Proceso</span>
             </h2>
             <p className="text-xl text-gray-600 font-lato max-w-3xl mx-auto">
-              Un proceso probado que garantiza el éxito de tus campañas publicitarias.
+              Un proceso probado que garantiza el éxito de tus campañas
+              publicitarias.
             </p>
           </div>
 
@@ -393,9 +436,7 @@ export default function PautaPublicitaria() {
                   <h3 className="text-xl font-bold font-lato text-flaks-dark mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 font-lato">
-                    {step.description}
-                  </p>
+                  <p className="text-gray-600 font-lato">{step.description}</p>
                 </div>
               );
             })}
@@ -407,19 +448,24 @@ export default function PautaPublicitaria() {
       <section className="py-20 bg-gradient-to-br from-flaks-gradient-start to-flaks-gradient-end">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black font-lato text-white mb-6">
-            ¿Listo para maximizar tu <span className="text-flaks-green">retorno publicitario</span>?
+            ¿Listo para maximizar tu{" "}
+            <span className="text-flaks-green">retorno publicitario</span>?
           </h2>
           <p className="text-xl text-gray-300 font-lato mb-8 max-w-3xl mx-auto">
-            Nuestros especialistas analizan tu negocio y crean campañas que realmente convierten. 
-            Comenzá hoy y ve los resultados en la primera semana.
+            Nuestros especialistas analizan tu negocio y crean campañas que
+            realmente convierten. Comenzá hoy y ve los resultados en la primera
+            semana.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-flaks-green hover:bg-flaks-green-dark text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300 transform hover:scale-105">
               Solicitar Auditoría Gratuita
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button variant="outline" className="border-flaks-green text-flaks-green hover:bg-flaks-green hover:text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300">
+            <Button
+              variant="outline"
+              className="border-flaks-green text-flaks-green hover:bg-flaks-green hover:text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300"
+            >
               Contactar Especialista
             </Button>
           </div>

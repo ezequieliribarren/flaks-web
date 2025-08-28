@@ -1,14 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { 
-  MessageCircle, 
-  Mail, 
-  Phone, 
+import {
+  MessageCircle,
+  Mail,
+  Phone,
   MapPin,
   ArrowRight,
   Clock,
   Users,
-  CheckCircle
+  CheckCircle,
 } from "lucide-react";
 
 export default function Contact() {
@@ -18,40 +18,40 @@ export default function Contact() {
       title: "WhatsApp",
       description: "Respuesta inmediata",
       action: "Enviar mensaje",
-      highlight: "+54 9 11 XXXX-XXXX"
+      highlight: "+54 9 11 XXXX-XXXX",
     },
     {
       icon: Mail,
       title: "Email",
       description: "Consultas detalladas",
       action: "Escribir email",
-      highlight: "hola@flaks.com.ar"
+      highlight: "hola@flaks.com.ar",
     },
     {
       icon: Phone,
       title: "Teléfono",
       description: "Llamada directa",
       action: "Llamar ahora",
-      highlight: "+54 11 XXXX-XXXX"
-    }
+      highlight: "+54 11 XXXX-XXXX",
+    },
   ];
 
   const steps = [
     {
       number: "01",
       title: "Consulta inicial",
-      description: "Nos contás tu proyecto y objetivos"
+      description: "Nos contás tu proyecto y objetivos",
     },
     {
-      number: "02", 
+      number: "02",
       title: "Propuesta personalizada",
-      description: "Diseñamos la solución perfecta para vos"
+      description: "Diseñamos la solución perfecta para vos",
     },
     {
       number: "03",
       title: "Desarrollo y lanzamiento",
-      description: "Creamos tu sitio y lo ponemos online"
-    }
+      description: "Creamos tu sitio y lo ponemos online",
+    },
   ];
 
   return (
@@ -64,8 +64,8 @@ export default function Contact() {
               ¿Listo para <span className="text-flaks-green">empezar</span>?
             </h2>
             <p className="text-xl text-gray-600 font-lato max-w-3xl mx-auto">
-              Conversemos sobre tu proyecto. Te asesoramos sin compromiso y te mostramos 
-              cómo podemos hacer crecer tu negocio digitalmente.
+              Conversemos sobre tu proyecto. Te asesoramos sin compromiso y te
+              mostramos cómo podemos hacer crecer tu negocio digitalmente.
             </p>
           </div>
 
@@ -75,12 +75,15 @@ export default function Contact() {
               <h3 className="text-2xl font-bold font-lato text-flaks-dark mb-8">
                 Elegí cómo querés contactarnos
               </h3>
-              
+
               <div className="space-y-6">
                 {contactMethods.map((method, index) => {
                   const Icon = method.icon;
                   return (
-                    <Card key={index} className="overflow-hidden hover:shadow-lg transition-all duration-300 group">
+                    <Card
+                      key={index}
+                      className="overflow-hidden hover:shadow-lg transition-all duration-300 group"
+                    >
                       <CardContent className="p-6">
                         <div className="flex items-center justify-between">
                           <div className="flex items-center space-x-4">
@@ -113,9 +116,10 @@ export default function Contact() {
             {/* Right: Process Steps */}
             <div className="bg-gradient-to-br from-flaks-gradient-start to-flaks-gradient-end rounded-3xl p-8">
               <h3 className="text-2xl font-bold font-lato text-white mb-8">
-                Nuestro proceso es <span className="text-flaks-green">simple</span>
+                Nuestro proceso es{" "}
+                <span className="text-flaks-green">simple</span>
               </h3>
-              
+
               <div className="space-y-6">
                 {steps.map((step, index) => (
                   <div key={index} className="flex items-start space-x-4">
@@ -156,9 +160,10 @@ export default function Contact() {
             Tu sitio web te está esperando
           </h2>
           <p className="text-xl text-black/80 font-lato mb-8 max-w-3xl mx-auto">
-            No esperes más para tener presencia digital. Empezá hoy y llevá tu negocio al siguiente nivel.
+            No esperes más para tener presencia digital. Empezá hoy y llevá tu
+            negocio al siguiente nivel.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button className="bg-black hover:bg-flaks-dark text-flaks-green font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300 transform hover:scale-105">
               ¡Empecemos ahora!

@@ -74,10 +74,10 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
       fontFamily: {
-        'lato': ['Lato', 'sans-serif'],
+        lato: ["Lato", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {

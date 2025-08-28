@@ -1,25 +1,25 @@
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Instagram, 
-  Linkedin, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Instagram,
+  Linkedin,
   Twitter,
-  ArrowUp
+  ArrowUp,
 } from "lucide-react";
 
 export default function Footer() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const services = [
     "Landing Pages",
-    "Sitios Corporativos", 
+    "Sitios Corporativos",
     "Tiendas Online",
     "Desarrollo Personalizado",
     "SEO y Marketing Digital",
-    "Hosting y Dominios"
+    "Hosting y Dominios",
   ];
 
   const company = [
@@ -28,7 +28,7 @@ export default function Footer() {
     "Casos de Éxito",
     "Testimonios",
     "Contacto",
-    "Soporte Técnico"
+    "Soporte Técnico",
   ];
 
   return (
@@ -42,26 +42,26 @@ export default function Footer() {
               FLAKS
             </div>
             <p className="text-gray-300 font-lato mb-6 leading-relaxed">
-              Creamos experiencias digitales que conectan tu negocio con más clientes. 
-              Velocidad, innovación y resultados garantizados.
+              Creamos experiencias digitales que conectan tu negocio con más
+              clientes. Velocidad, innovación y resultados garantizados.
             </p>
-            
+
             {/* Social Links */}
             <div className="flex space-x-4">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="p-2 bg-flaks-gray-dark hover:bg-flaks-green rounded-lg transition-colors duration-300 group"
               >
                 <Instagram className="w-5 h-5 text-gray-400 group-hover:text-black" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="p-2 bg-flaks-gray-dark hover:bg-flaks-green rounded-lg transition-colors duration-300 group"
               >
                 <Linkedin className="w-5 h-5 text-gray-400 group-hover:text-black" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="p-2 bg-flaks-gray-dark hover:bg-flaks-green rounded-lg transition-colors duration-300 group"
               >
                 <Twitter className="w-5 h-5 text-gray-400 group-hover:text-black" />
@@ -77,8 +77,8 @@ export default function Footer() {
             <ul className="space-y-3">
               {services.map((service, index) => (
                 <li key={index}>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="text-gray-300 hover:text-flaks-green font-lato transition-colors duration-300"
                   >
                     {service}
@@ -96,8 +96,8 @@ export default function Footer() {
             <ul className="space-y-3">
               {company.map((item, index) => (
                 <li key={index}>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="text-gray-300 hover:text-flaks-green font-lato transition-colors duration-300"
                   >
                     {item}
@@ -121,22 +121,18 @@ export default function Footer() {
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-flaks-green mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-300 font-lato">
-                    +54 11 XXXX-XXXX
-                  </p>
+                  <p className="text-gray-300 font-lato">+54 11 XXXX-XXXX</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-flaks-green mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-300 font-lato">
-                    hola@flaks.com.ar
-                  </p>
+                  <p className="text-gray-300 font-lato">hola@flaks.com.ar</p>
                 </div>
               </div>
             </div>
@@ -149,21 +145,21 @@ export default function Footer() {
             <div className="text-gray-400 font-lato text-center md:text-left mb-4 md:mb-0">
               © 2024 FLAKS. Todos los derechos reservados.
             </div>
-            
+
             <div className="flex items-center space-x-6">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="text-gray-400 hover:text-flaks-green font-lato transition-colors duration-300"
               >
                 Términos y Condiciones
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="text-gray-400 hover:text-flaks-green font-lato transition-colors duration-300"
               >
                 Política de Privacidad
               </a>
-              
+
               {/* Scroll to top button */}
               <button
                 onClick={scrollToTop}

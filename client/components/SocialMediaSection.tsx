@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { 
-  Instagram, 
-  Facebook, 
-  MessageCircle, 
+import {
+  Instagram,
+  Facebook,
+  MessageCircle,
   TrendingUp,
   Users,
   Calendar,
-  ArrowRight
+  ArrowRight,
 } from "lucide-react";
 
 export default function SocialMediaSection() {
@@ -22,10 +22,10 @@ export default function SocialMediaSection() {
         "Historias y reels básicos",
         "Diseño gráfico incluido",
         "Programación de contenido",
-        "Respuesta a mensajes (horario comercial)"
+        "Respuesta a mensajes (horario comercial)",
       ],
       highlight: "",
-      color: "from-pink-500 to-purple-600"
+      color: "from-pink-500 to-purple-600",
     },
     {
       icon: TrendingUp,
@@ -38,11 +38,11 @@ export default function SocialMediaSection() {
         "Diseño gráfico premium",
         "Análisis y reportes mensuales",
         "Community management completo",
-        "Estrategia de contenidos personalizada"
+        "Estrategia de contenidos personalizada",
       ],
       highlight: "",
       color: "from-flaks-green to-emerald-400",
-      featured: true
+      featured: true,
     },
     {
       icon: Users,
@@ -55,18 +55,18 @@ export default function SocialMediaSection() {
         "Gestión de múltiples plataformas",
         "Reportes detallados",
         "Community management 24/7",
-        "Campañas publicitarias básicas incluidas"
+        "Campañas publicitarias básicas incluidas",
       ],
       highlight: "",
-      color: "from-blue-500 to-indigo-600"
-    }
+      color: "from-blue-500 to-indigo-600",
+    },
   ];
 
   const platforms = [
     { icon: Instagram, name: "Instagram", color: "text-pink-500" },
     { icon: Facebook, name: "Facebook", color: "text-blue-600" },
     { icon: MessageCircle, name: "WhatsApp Business", color: "text-green-500" },
-    { icon: TrendingUp, name: "LinkedIn", color: "text-blue-500" }
+    { icon: TrendingUp, name: "LinkedIn", color: "text-blue-500" },
   ];
 
   return (
@@ -78,18 +78,23 @@ export default function SocialMediaSection() {
             <span className="text-flaks-green">Gestión de Redes Sociales</span>
           </h2>
           <p className="text-xl text-gray-600 font-lato max-w-3xl mx-auto mb-8">
-            Potenciamos tu presencia digital con contenido estratégico que conecta con tu audiencia 
-            y hace crecer tu comunidad.
+            Potenciamos tu presencia digital con contenido estratégico que
+            conecta con tu audiencia y hace crecer tu comunidad.
           </p>
-          
+
           {/* Supported Platforms */}
           <div className="flex flex-wrap justify-center gap-6 mb-8">
             {platforms.map((platform, index) => {
               const Icon = platform.icon;
               return (
-                <div key={index} className="flex items-center space-x-2 bg-white px-4 py-2 rounded-full shadow-sm border">
+                <div
+                  key={index}
+                  className="flex items-center space-x-2 bg-white px-4 py-2 rounded-full shadow-sm border"
+                >
                   <Icon className={`w-5 h-5 ${platform.color}`} />
-                  <span className="font-lato font-medium text-gray-700">{platform.name}</span>
+                  <span className="font-lato font-medium text-gray-700">
+                    {platform.name}
+                  </span>
                 </div>
               );
             })}
@@ -101,10 +106,10 @@ export default function SocialMediaSection() {
           {socialPlans.map((plan, index) => {
             const Icon = plan.icon;
             return (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className={`relative overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
-                  plan.featured ? 'ring-2 ring-flaks-green shadow-2xl' : ''
+                  plan.featured ? "ring-2 ring-flaks-green shadow-2xl" : ""
                 }`}
               >
                 {plan.featured && (
@@ -112,11 +117,13 @@ export default function SocialMediaSection() {
                     MÁS POPULAR
                   </div>
                 )}
-                
+
                 <CardContent className="p-8 h-full flex flex-col">
                   {/* Icon and Header */}
                   <div className="text-center mb-6">
-                    <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${plan.color} mb-4`}>
+                    <div
+                      className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${plan.color} mb-4`}
+                    >
                       <Icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-2xl font-black font-lato text-flaks-dark mb-2">
@@ -136,7 +143,9 @@ export default function SocialMediaSection() {
                       {plan.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start">
                           <Calendar className="w-5 h-5 text-flaks-green mt-0.5 mr-3 flex-shrink-0" />
-                          <span className="text-gray-700 font-lato">{feature}</span>
+                          <span className="text-gray-700 font-lato">
+                            {feature}
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -149,13 +158,13 @@ export default function SocialMediaSection() {
                         {plan.highlight}
                       </div>
                     )}
-                    <Button 
+                    <Button
                       className={`w-full font-lato font-bold py-3 rounded-xl transition-all duration-300 ${
-                        plan.featured 
-                          ? 'bg-flaks-green hover:bg-flaks-green-dark text-black' 
-                          : 'bg-flaks-dark hover:bg-flaks-dark-secondary text-white'
+                        plan.featured
+                          ? "bg-flaks-green hover:bg-flaks-green-dark text-black"
+                          : "bg-flaks-dark hover:bg-flaks-dark-secondary text-white"
                       }`}
-                      onClick={() => window.location.href = '/redes-sociales'}
+                      onClick={() => (window.location.href = "/redes-sociales")}
                     >
                       Ver Detalles del Plan
                     </Button>
@@ -169,11 +178,12 @@ export default function SocialMediaSection() {
         {/* CTA Section */}
         <div className="bg-flaks-dark rounded-3xl p-8 md:p-12 text-center">
           <h3 className="text-3xl font-black font-lato text-white mb-6">
-            ¿Necesitás una estrategia <span className="text-flaks-green">personalizada</span>?
+            ¿Necesitás una estrategia{" "}
+            <span className="text-flaks-green">personalizada</span>?
           </h3>
           <p className="text-xl text-gray-300 font-lato mb-8 max-w-3xl mx-auto">
-            Cada negocio es único. Creamos estrategias de contenido que se adaptan 
-            perfectamente a tu marca y objetivos.
+            Cada negocio es único. Creamos estrategias de contenido que se
+            adaptan perfectamente a tu marca y objetivos.
           </p>
           <Button className="bg-flaks-green hover:bg-flaks-green-dark text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300 transform hover:scale-105">
             Consultá tu Estrategia
