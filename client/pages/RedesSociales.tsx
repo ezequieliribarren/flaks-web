@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ContactForm from "../../components/ContactForm";
+import RemixProcessForm from "@/components/RemixProcessForm";
 import {
   Instagram,
   Facebook,
@@ -79,7 +79,7 @@ export default function RedesSociales() {
       icon: Instagram,
       name: "Instagram",
       color: "text-pink-500",
-      description: "Stories, reels, feed y IGTV",
+      description: "Stories, reels, feed y más",
     },
     {
       icon: Facebook,
@@ -92,13 +92,7 @@ export default function RedesSociales() {
       name: "WhatsApp Business",
       color: "text-green-500",
       description: "Estados y atención directa",
-    },
-    {
-      icon: TrendingUp,
-      name: "LinkedIn",
-      color: "text-blue-500",
-      description: "Networking profesional y B2B",
-    },
+    }
   ];
 
   const services = [
@@ -179,9 +173,9 @@ export default function RedesSociales() {
               </div>
 
               <h1 className="text-4xl md:text-5xl font-black font-lato text-white mb-6 leading-tight">
-                Potenciamos tu{" "}
-                <span className="text-flaks-green">presencia digital</span> en
-                redes sociales
+                Gestionamos tus{" "}
+                <span className="text-flaks-green"> redes sociales</span>
+            
               </h1>
 
               <p className="text-xl text-gray-300 font-lato mb-8 leading-relaxed">
@@ -196,7 +190,7 @@ export default function RedesSociales() {
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-flaks-green text-flaks-green hover:bg-flaks-green hover:text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300"
+                  className="border-flaks-green text-flaks-violet-dark hover:bg-flaks-green hover:text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300"
                 >
                   Solicitar Presupuesto
                 </Button>
@@ -231,7 +225,7 @@ export default function RedesSociales() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-black font-lato text-flaks-dark mb-4">
               Plataformas que{" "}
-              <span className="text-flaks-green">gestionamos</span>
+              <span className="text-flaks-violet-dark">gestionamos</span>
             </h2>
           </div>
 
@@ -288,7 +282,7 @@ export default function RedesSociales() {
                     </div>
                   )}
 
-                  <CardContent className="p-8 h-full flex flex-col">
+                  <CardContent className="p-12 h-full flex flex-col">
                     <div className="text-center mb-6">
                       <div
                         className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${plan.color} mb-4`}
@@ -356,8 +350,8 @@ export default function RedesSociales() {
                   key={index}
                   className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300"
                 >
-                  <div className="inline-flex p-4 bg-flaks-green/10 rounded-2xl mb-6">
-                    <Icon className="w-8 h-8 text-flaks-green" />
+                  <div className="inline-flex p-4 text-flaks-violet-dark/10 rounded-2xl mb-6">
+                    <Icon className="w-8 h-8 text-flaks-violet-dark" />
                   </div>
                   <h3 className="text-xl font-bold font-lato text-flaks-dark mb-3">
                     {service.title}
@@ -403,45 +397,8 @@ export default function RedesSociales() {
         </div>
       </section>
 
-      {/* Contact Form Section */}
-      <section className="py-20 bg-gradient-to-br from-flaks-gradient-start to-flaks-gradient-end">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-black font-lato text-white">
-              Contactanos <span className="text-flaks-green">ahora</span>
-            </h2>
-          </div>
-          <ContactForm />
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-flaks-gradient-start to-flaks-gradient-end">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-black font-lato text-white mb-6">
-            ¿Listo para hacer crecer tus{" "}
-            <span className="text-flaks-green">redes sociales</span>?
-          </h2>
-          <p className="text-xl text-gray-300 font-lato mb-8 max-w-3xl mx-auto">
-            Contanos sobre tu marca y te proponemos la mejor estrategia para
-            conectar con tu audiencia.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-flaks-green hover:bg-flaks-green-dark text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300 transform hover:scale-105">
-              Contactar por WhatsApp
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button
-              variant="outline"
-              className="border-flaks-green text-flaks-green hover:bg-flaks-green hover:text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300"
-            >
-              Solicitar Presupuesto
-            </Button>
-          </div>
-        </div>
-      </section>
-
+      {/* Contact Form Section (remix) */}
+      <RemixProcessForm />
       <Footer />
     </div>
   );

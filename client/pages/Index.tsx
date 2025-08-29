@@ -1,20 +1,22 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Services from "@/components/Services";
+import DevelopmentHome from "@/components/DevelopmentHome";
 import SocialMediaSection from "@/components/SocialMediaSection";
 import AdvertisingHome from "@/components/AdvertisingHome";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import RemixProcessForm from "@/components/RemixProcessForm";
 
 export default function Index() {
   return (
     <div className="min-h-screen">
       <Header />
       <Hero />
-      <Services />
+      <DevelopmentHome />
       <SocialMediaSection />
       <AdvertisingHome />
-      <Contact />
+
+      <RemixProcessForm />
       <Footer />
     </div>
   );

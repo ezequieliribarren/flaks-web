@@ -1,76 +1,93 @@
 import { Button } from "@/components/ui/button";
 import { Target, BarChart, TrendingUp, ArrowRight } from "lucide-react";
+import { useInView } from "@/hooks/use-in-view";
+import { cn } from "@/lib/utils";
 
 export default function AdvertisingHome() {
-  const features = [
-    {
-      icon: Target,
-      title: "Segmentación Precisa",
-      description: "Llegamos exactamente a tu audiencia ideal",
-    },
-    {
-      icon: BarChart,
-      title: "Resultados Medibles",
-      description: "Reportes detallados de cada peso invertido",
-    },
-    {
-      icon: TrendingUp,
-      title: "Optimización Continua",
-      description: "Mejoramos constantemente el rendimiento",
-    },
+  const bullets = [
+    { icon: Target, text: "Segmentación precisa por audiencia" },
+    { icon: BarChart, text: "Resultados medibles y reportes claros" },
+    { icon: TrendingUp, text: "Optimización continua de campañas" },
   ];
 
+  const { ref: adsRef, inView: adsInView } = useInView({
+    threshold: 0.2,
+    rootMargin: "0px 0px -10% 0px",
+    once: true,
+  });
+
   return (
-    <section id="pauta-publicitaria" className="py-20 bg-white">
+    <section
+      id="pauta-publicitaria"
+      className="py-28 bg-gray-50 relative overflow-hidden min-h-screen flex items-center"
+    >
+      {/* Violet diagonal accents for section */}
+      <div aria-hidden className="pointer-events-none absolute inset-0">
+        <div className="absolute top-[22%] left-0 w-full h-px bg-gradient-to-r from-transparent via-violet-500/25 to-transparent rotate-[9deg]" />
+        <div className="absolute top-[58%] left-0 w-full h-px bg-gradient-to-r from-transparent via-violet-500/20 to-transparent -rotate-[11deg]" />
+      </div>
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black font-lato text-flaks-dark mb-6">
-            <span className="text-flaks-green">Pauta Publicitaria</span>
-          </h2>
-          <p className="text-xl text-gray-600 font-lato max-w-3xl mx-auto mb-8">
-            Convertimos tu inversión publicitaria en resultados reales.
-            Gestionamos tus campañas en Google Ads, Facebook, Instagram y otras
-            plataformas para maximizar tu retorno.
-          </p>
-        </div>
-
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
-            return (
-              <div key={index} className="text-center">
-                <div className="inline-flex p-4 bg-flaks-green/10 rounded-2xl mb-4">
-                  <Icon className="w-8 h-8 text-flaks-green" />
-                </div>
-                <h3 className="text-xl font-bold font-lato text-flaks-dark mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 font-lato">{feature.description}</p>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-gradient-to-br from-flaks-gradient-start to-flaks-gradient-end rounded-3xl p-8 md:p-12">
-            <h3 className="text-3xl font-black font-lato text-white mb-6">
-              ¿Querés maximizar tu{" "}
-              <span className="text-flaks-green">retorno publicitario</span>?
-            </h3>
-            <p className="text-xl text-gray-300 font-lato mb-8 max-w-3xl mx-auto">
-              Nuestros especialistas crean campañas que realmente convierten.
-              Descubre todas nuestras estrategias publicitarias.
+        <div className="grid lg:grid-cols-10 gap-20 items-center">
+          {/* Left: Content */}
+          <div className="space-y-10 lg:col-span-6">
+            <h2 className="text-4xl md:text-5xl font-black font-lato text-flaks-dark">
+              Pauta <span className="text-flaks-violet-dark">Publicitaria</span>
+            </h2>
+            <p className="text-xl text-gray-700 font-lato max-w-2xl">
+              Convertimos tu inversión en resultados reales. Gestionamos campañas
+              en Google Ads, Meta Ads y más, con foco en ROI.
             </p>
-            <Button
-              className="bg-flaks-green hover:bg-flaks-green-dark text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300 transform hover:scale-105"
-              onClick={() => (window.location.href = "/pauta-publicitaria")}
-            >
-              Ver Servicios de Publicidad
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            <ul className="space-y-3">
+              {bullets.map((b, i) => {
+                const Icon = b.icon;
+                return (
+                  <li key={i} className="flex items-start text-gray-700 font-lato">
+                    <Icon className="w-5 h-5 text-flaks-violet-light mt-0.5 mr-3 flex-shrink-0" />
+                    <span>{b.text}</span>
+                  </li>
+                );
+              })}
+            </ul>
+            <div>
+              <Button
+                className="bg-flaks-violet-light hover:bg-flaks-violet-dark text-white font-lato font-bold px-8 py-4 rounded-xl transition-all duration-300"
+                onClick={() => (window.location.href = "/pauta-publicitaria")}
+              >
+                Ver servicios
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </div>
+          </div>
+
+          {/* Right: Visual */}
+          <div
+            ref={adsRef as any}
+            className={cn(
+              "relative lg:col-span-4 lg:justify-self-end lg:mr-[-5%] transition-all duration-700 ease-out",
+              adsInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8",
+            )}
+          >
+            {/* Formas envolventes (variante sutil, lado derecho) */}
+            <div aria-hidden className="pointer-events-none absolute inset-0 z-0">
+              {/* Semicírculo desde el borde derecho */}
+              <div
+                className="absolute right-0 top-6 w-[300px] h-[500px] rounded-l-[9999px] opacity-90"
+                style={{ backgroundColor: "rgb(89 40 235 / var(--tw-text-opacity, 1))" }}
+              />
+              {/* Placas diagonales */}
+              <div className="absolute -left-16 top-10 w-[380px] h-[200px] rotate-[10deg] rounded-[3rem] bg-gradient-to-tr from-flaks-violet-light/20 to-transparent" />
+              <div className="absolute -left-8 top-44 w-[420px] h-[180px] rotate-[6deg] rounded-[3rem] bg-gradient-to-tr from-flaks-violet-light/15 to-transparent" />
+              {/* Rayos finos */}
+              <div className="absolute right-2 top-12 w-[320px] h-px rotate-[14deg] bg-gradient-to-r from-transparent via-flaks-violet-light/50 to-transparent" />
+              <div className="absolute right-4 top-28 w-[300px] h-px rotate-[10deg] bg-gradient-to-r from-transparent via-flaks-violet-light/40 to-transparent" />
+            </div>
+            <img
+              src="/pauta.png"
+              alt="Figura de persona representando campañas publicitarias"
+              className="relative z-10 w-[min(50vw,400px)] max-w-[420px] h-auto drop-shadow-2xl object-contain"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@ import { createRoot } from 'react-dom/client';
 import AppShell from '../../_app-shell';
 import Header from '../../../../client/components/Header';
 import Footer from '../../../../client/components/Footer';
-import ContactForm from '../../../../components/ContactForm';
+import RemixProcessForm from '../../../../client/components/RemixProcessForm';
 
 function LandingB() {
   return (
@@ -11,7 +11,7 @@ function LandingB() {
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h1 className="text-4xl md:text-5xl font-black font-lato text-white mb-6">Landing B</h1>
         <p className="text-gray-300 font-lato mb-8">Otra variante de landing. Copiá y adaptá el contenido.</p>
-        <ContactForm />
+        <RemixProcessForm />
       </main>
       <Footer />
     </div>
@@ -24,4 +24,3 @@ createRoot(root).render(
     <LandingB />
   </AppShell>
 );
-

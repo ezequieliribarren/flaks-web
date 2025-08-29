@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "../../components/ContactForm";
+import RemixProcessForm from "@/components/RemixProcessForm";
 import {
   Target,
   BarChart,
@@ -184,27 +185,19 @@ export default function PautaPublicitaria() {
               </div>
 
               <h1 className="text-4xl md:text-5xl font-black font-lato text-white mb-6 leading-tight">
-                Convertimos tu{" "}
-                <span className="text-flaks-green">inversión publicitaria</span>{" "}
-                en resultados reales
+                Pauta publicitaria |{" "}
+                <span className="text-flaks-green">Publicidad online</span>{" "}
               </h1>
 
               <p className="text-xl text-gray-300 font-lato mb-8 leading-relaxed">
-                Gestionamos tus campañas en Google Ads, Facebook, Instagram y
-                otras plataformas para maximizar tu retorno de inversión y hacer
+                Gestionamos tus campañas en Google Ads, Facebook, Instagram para maximizar tu retorno de inversión y hacer
                 crecer tu negocio.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button className="bg-flaks-green hover:bg-flaks-green-dark text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300 transform hover:scale-105">
-                  Solicitar Auditoría Gratuita
+                  Solicitar presupuesto
                   <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-                <Button
-                  variant="outline"
-                  className="border-flaks-green text-flaks-green hover:bg-flaks-green hover:text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300"
-                >
-                  Ver Casos de Éxito
                 </Button>
               </div>
             </div>
@@ -240,91 +233,12 @@ export default function PautaPublicitaria() {
         </div>
       </section>
 
-      {/* Metrics Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-black font-lato text-flaks-dark mb-4">
-              Resultados que{" "}
-              <span className="text-flaks-green">demuestran</span> nuestra
-              experiencia
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            {metrics.map((metric, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl font-black font-lato text-flaks-green mb-2">
-                  {metric.value}
-                </div>
-                <div className="text-lg font-bold font-lato text-flaks-dark mb-1">
-                  {metric.label}
-                </div>
-                <div className="text-sm text-gray-600 font-lato">
-                  {metric.description}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Platforms Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black font-lato text-flaks-dark mb-6">
-              Plataformas que{" "}
-              <span className="text-flaks-green">dominamos</span>
-            </h2>
-            <p className="text-xl text-gray-600 font-lato max-w-3xl mx-auto">
-              Trabajamos en las principales plataformas publicitarias para
-              llegar a tu audiencia donde sea que esté.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {platforms.map((platform, index) => {
-              const Icon = platform.icon;
-              return (
-                <Card
-                  key={index}
-                  className="h-full hover:shadow-lg transition-shadow duration-300"
-                >
-                  <CardContent className="p-6 text-center h-full flex flex-col">
-                    <div className="inline-flex p-4 bg-flaks-green/10 rounded-2xl mb-4">
-                      <Icon className="w-8 h-8 text-flaks-green" />
-                    </div>
-                    <h3 className="text-xl font-bold font-lato text-flaks-dark mb-3">
-                      {platform.name}
-                    </h3>
-                    <p className="text-gray-600 font-lato mb-4 flex-grow">
-                      {platform.description}
-                    </p>
-                    <div className="space-y-1">
-                      {platform.features.map((feature, featureIndex) => (
-                        <div
-                          key={featureIndex}
-                          className="text-sm text-flaks-green font-lato font-medium"
-                        >
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* Services Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black font-lato text-flaks-dark mb-6">
-              Nuestros <span className="text-flaks-green">Servicios</span>
+              Nuestros <span className="text-flaks-violet-dark">Servicios</span>
             </h2>
             <p className="text-xl text-gray-600 font-lato max-w-3xl mx-auto">
               Ofrecemos un servicio integral de publicidad digital que abarca
@@ -374,19 +288,6 @@ export default function PautaPublicitaria() {
           </div>
         </div>
       </section>
-
-      {/* Contact Form Section */}
-      <section className="py-20 bg-gradient-to-br from-flaks-gradient-start to-flaks-gradient-end">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-black font-lato text-white">
-              Contactanos <span className="text-flaks-green">ahora</span>
-            </h2>
-          </div>
-          <ContactForm />
-        </div>
-      </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -417,73 +318,9 @@ export default function PautaPublicitaria() {
           </div>
         </div>
       </section>
+      {/* Contact Form Section (remix) */}
+      <RemixProcessForm />
 
-      {/* Process Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-black font-lato text-flaks-dark mb-6">
-              Nuestro <span className="text-flaks-dark-secondary">Proceso</span>
-            </h2>
-            <p className="text-xl text-gray-600 font-lato max-w-3xl mx-auto">
-              Un proceso probado que garantiza el éxito de tus campañas
-              publicitarias.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            {process.map((step, index) => {
-              const Icon = step.icon;
-              return (
-                <div key={index} className="text-center">
-                  <div className="relative mb-6">
-                    <div className="w-20 h-20 bg-flaks-green rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl font-black font-lato text-black">
-                        {step.number}
-                      </span>
-                    </div>
-                    <div className="inline-flex p-2 bg-white rounded-xl shadow-md -mt-6 relative z-10">
-                      <Icon className="w-6 h-6 text-flaks-green" />
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold font-lato text-flaks-dark mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-600 font-lato">{step.description}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-flaks-gradient-start to-flaks-gradient-end">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-black font-lato text-white mb-6">
-            ¿Listo para maximizar tu{" "}
-            <span className="text-flaks-green">retorno publicitario</span>?
-          </h2>
-          <p className="text-xl text-gray-300 font-lato mb-8 max-w-3xl mx-auto">
-            Nuestros especialistas analizan tu negocio y crean campañas que
-            realmente convierten. Comenzá hoy y ve los resultados en la primera
-            semana.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-flaks-green hover:bg-flaks-green-dark text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300 transform hover:scale-105">
-              Solicitar Auditoría Gratuita
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button
-              variant="outline"
-              className="border-flaks-green text-flaks-green hover:bg-flaks-green hover:text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300"
-            >
-              Contactar Especialista
-            </Button>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>

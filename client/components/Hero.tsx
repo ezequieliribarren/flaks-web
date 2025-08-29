@@ -17,13 +17,13 @@ export default function Hero() {
       </div>
 
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+        <div className="grid lg:grid-cols-2 gap-14 items-center min-h-[80vh]">
           {/* Left Side - Content */}
-          <div className="space-y-8">
+          <div className="space-y-12">
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 bg-flaks-green/10 border border-flaks-green/20 rounded-full text-flaks-green font-lato font-medium text-sm">
               <Zap className="w-4 h-4 mr-2" />
-              Velocidad Digital | Agilidad Tecnológica
+              Planes que se adaptan a tus objetivos
             </div>
 
             {/* Main Headline */}
@@ -33,7 +33,6 @@ export default function Hero() {
                 presencia digital
                 <div className="absolute -bottom-2 left-0 right-0 h-1 bg-flaks-green/30 rounded-full"></div>
               </span>{" "}
-              con velocidad y diseño
             </h1>
 
             {/* Subtitle */}
@@ -48,38 +47,41 @@ export default function Hero() {
                 ¡Empecemos Ahora!
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button
-                variant="outline"
-                className="border-flaks-green text-flaks-green hover:bg-flaks-green hover:text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300"
-              >
-                Ver Servicios
-              </Button>
+          
             </div>
 
-            {/* Quick Stats */}
-            <div className="flex gap-8 pt-4">
-              <div>
-                <div className="text-2xl font-black font-lato text-flaks-green">
-                  16K+
-                </div>
-                <div className="text-sm text-gray-400 font-lato">
-                  Sitios creados
-                </div>
-              </div>
-              <div>
-                <div className="text-2xl font-black font-lato text-flaks-green">
-                  50+
-                </div>
-                <div className="text-sm text-gray-400 font-lato">
-                  Años experiencia
-                </div>
-              </div>
-              <div>
-                <div className="text-2xl font-black font-lato text-flaks-green">
-                  24/7
-                </div>
-                <div className="text-sm text-gray-400 font-lato">Soporte</div>
-              </div>
+            {/* Quick Actions */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Button
+                className="bg-flaks-green/10 hover:bg-flaks-green text-white/70 border border-flaks-green/70 font-lato font-bold px-6 py-3 rounded-xl transition-all duration-300"
+                onClick={() =>
+                  document
+                    .getElementById("desarrollo-web")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                Desarrollo web
+              </Button>
+              <Button
+                className="bg-flaks-green/10 hover:bg-flaks-green text-white/70 border border-flaks-green/70 font-lato font-bold px-6 py-3 rounded-xl transition-all duration-300"
+                onClick={() =>
+                  document
+                    .getElementById("redes-sociales")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                Gestion de redes sociales
+              </Button>
+              <Button
+                className="bg-flaks-green/10 hover:bg-flaks-green text-white/70 border border-flaks-green/70 font-lato font-bold px-6 py-3 rounded-xl transition-all duration-300"
+                onClick={() =>
+                  document
+                    .getElementById("pauta-publicitaria")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                Pauta publicitaria
+              </Button>
             </div>
           </div>
 

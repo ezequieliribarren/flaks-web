@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" role="img" aria-labelledby="title"><title>Persona con teléfono</title>
+  <g fill="#8B6FFF" opacity="0.9">
+    <circle cx="320" cy="150" r="75"/>
+    <path d="M160 300 Q320 250 480 300 L500 640 Q500 710 430 710 H210 Q140 710 140 640 Z"/>
+    <rect x="360" y="380" width="32" height="80" rx="8"/>
+    <circle cx="430" cy="360" r="10"/>
+  </g>
+</svg>
+

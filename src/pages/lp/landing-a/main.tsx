@@ -2,7 +2,7 @@ import { createRoot } from 'react-dom/client';
 import AppShell from '../../_app-shell';
 import Header from '../../../../client/components/Header';
 import Footer from '../../../../client/components/Footer';
-import ContactForm from '../../../../components/ContactForm';
+import RemixProcessForm from '../../../../client/components/RemixProcessForm';
 
 function LandingA() {
   return (
@@ -11,7 +11,7 @@ function LandingA() {
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h1 className="text-4xl md:text-5xl font-black font-lato text-white mb-6">Landing A</h1>
         <p className="text-gray-300 font-lato mb-8">Ejemplo de landing para pauta. Duplica esta carpeta para nuevas landings.</p>
-        <ContactForm />
+        <RemixProcessForm />
       </main>
       <Footer />
     </div>
@@ -24,4 +24,3 @@ createRoot(root).render(
     <LandingA />
   </AppShell>
 );
-

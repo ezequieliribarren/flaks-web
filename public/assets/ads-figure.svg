@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" role="img" aria-labelledby="title"><title>Persona con megáfono</title>
+  <g fill="#8B6FFF" opacity="0.9">
+    <circle cx="300" cy="150" r="70"/>
+    <path d="M150 300 Q300 250 470 300 L500 640 Q500 710 430 710 H200 Q130 710 130 640 Z"/>
+    <path d="M440 360 L560 320 L560 400 L440 360 Z"/>
+    <rect x="415" y="350" width="30" height="40" rx="6"/>
+  </g>
+</svg>
+
