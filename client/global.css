@@ -107,3 +107,14 @@
     @apply bg-background text-foreground font-lato;
   }
 }
+
+@layer utilities {
+  /* Hide scrollbars on elements with overflow */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}

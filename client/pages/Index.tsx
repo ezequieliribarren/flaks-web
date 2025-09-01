@@ -15,7 +15,6 @@ export default function Index() {
       <DevelopmentHome />
       <SocialMediaSection />
       <AdvertisingHome />
-
       <RemixProcessForm />
       <Footer />
     </div>

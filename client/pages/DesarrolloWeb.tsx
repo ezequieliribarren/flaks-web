@@ -10,6 +10,7 @@ import {
   ShoppingCart,
   CheckCircle,
   ArrowRight,
+  ArrowLeft,
   Clock,
   Shield,
   Smartphone,
@@ -19,6 +20,7 @@ import {
   Mail,
   MessageCircle,
 } from "lucide-react";
+import { useRef } from "react";
 
 export default function DesarrolloWeb() {
   const plans = [
@@ -40,7 +42,7 @@ export default function DesarrolloWeb() {
     },
     {
       icon: Code,
-      title: "Web Corporativa",
+      title: "Web Profesional",
       subtitle: "POSICIONÁ Y ESCALÁ TU MARCA",
       description: "Ideal para empresas establecidas",
       features: [
@@ -57,7 +59,7 @@ export default function DesarrolloWeb() {
     },
     {
       icon: ShoppingCart,
-      title: "E-commerce",
+      title: "Tienda online",
       subtitle: "¡VENDÉ ONLINE 24/7!",
       description: "Tienda digital completa",
       features: [
@@ -118,6 +120,29 @@ export default function DesarrolloWeb() {
       description: "Te acompañamos después del lanzamiento",
     },
   ];
+
+  const clientLogos = [
+    { src: "/trabajos/luqstoff.png", name: "Lusqtoff Tigre", href: "https://lusqtofftigre.com.ar/" },
+    { src: "/trabajos/baires.png", name: "Baires Flights", href: "https://bairesflights.com.ar/" },
+    { src: "/trabajos/tc.png", name: "TC La Revista", href: "https://tclarevista.com.ar/" },
+    { src: "/trabajos/tibertec.png", name: "Tibertec", href: "https://tibertec.com.ar/" },
+    { src: "/trabajos/practical.png", name: "Practical Buy", href: "https://practicalbuy.com.ar/" },
+    { src: "/trabajos/decoinox.png", name: "Decoinox", href: "https://decoinox.com.ar/" },
+    { src: "/trabajos/biondi.png", name: "Estudio Biondi", href: "https://estudiobiondi.com/" },
+    { src: "/trabajos/santa.png", name: "Transporte Santa Milonguita", href: "https://transportesantamilonguita.com/" },
+    { src: "/trabajos/irigoyen.png", name: "A. Irigoyen Photo", href: "https://airigoyenphoto.com.ar/" },
+    { src: "/trabajos/tobyco.png", name: "Tobyco Constructora", href: "https://tobycoconstructora.com.ar/" },
+    { src: "/trabajos/artanium.png", name: "Artanium", href: "https://artanium.com.ar/" },
+    { src: "/trabajos/senko.png", name: "Senko", href: "https://senko.com.ar/" },
+  ];
+
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const scrollSlider = (dir: number) => {
+    const el = sliderRef.current;
+    if (!el) return;
+    const amount = Math.floor(el.clientWidth * 0.85);
+    el.scrollBy({ left: dir * amount, behavior: "smooth" });
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -181,7 +206,9 @@ export default function DesarrolloWeb() {
             </div>
           </div>
         </div>
-      </section>      <section className="py-20 bg-white">
+      </section>      
+      
+      <section id="planes" className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black font-lato text-flaks-dark mb-6">
@@ -258,6 +285,94 @@ export default function DesarrolloWeb() {
           </div>
         </div>
       </section>
+      {/* Clients/Trust Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h3 className="text-3xl md:text-4xl font-black font-lato text-flaks-dark">
+              Clientes que confían en FLAKS
+            </h3>
+            <p className="text-gray-600 font-lato mt-3 max-w-3xl mx-auto">
+              Marcas de distintas industrias nos eligen por nuestro enfoque profesional,
+              cumplimiento y resultados.
+            </p>
+          </div>
+          <div className="relative">
+            <div
+              ref={sliderRef}
+              className="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar"
+            >
+              {clientLogos.map((logo, i) => (
+                <a
+                  key={i}
+                  href={logo.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative overflow-hidden rounded-2xl border border-flaks-violet/20 bg-flaks-violet/5 shadow-sm hover:shadow-md transition-shadow snap-start min-w-[85%] sm:min-w-[60%] md:min-w-[45%] lg:min-w-[30%] xl:min-w-[25%]"
+                  aria-label={`Abrir ${logo.name}`}
+                >
+                  <img
+                    src={logo.src}
+                    alt={logo.name}
+                    className="w-full h-48 md:h-56 lg:h-64 object-cover opacity-95 group-hover:opacity-100 transition duration-300"
+                    loading="lazy"
+                  />
+                  {/* Violet tint overlay (removed on hover) */}
+                  <div
+                    className="absolute inset-0 bg-flaks-violet/20 group-hover:bg-transparent transition-colors duration-300"
+                    aria-hidden="true"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-flaks-violet-dark/60 to-transparent">
+                    <span className="text-white font-lato text-sm font-bold">
+                      {logo.name}
+                    </span>
+                  </div>
+                </a>
+              ))}
+            </div>
+            <div className="pointer-events-none absolute inset-y-0 left-0 right-0 flex items-center justify-between">
+              <button
+                type="button"
+                onClick={() => scrollSlider(-1)}
+                className="pointer-events-auto ml-[-8px] md:ml-[-12px] p-2 rounded-full bg-white/80 hover:bg-white shadow ring-1 ring-gray-200 transition"
+                aria-label="Anterior"
+              >
+                <ArrowLeft className="w-5 h-5 text-flaks-dark" />
+              </button>
+              <button
+                type="button"
+                onClick={() => scrollSlider(1)}
+                className="pointer-events-auto mr-[-8px] md:mr-[-12px] p-2 rounded-full bg-white/80 hover:bg-white shadow ring-1 ring-gray-200 transition"
+                aria-label="Siguiente"
+              >
+                <ArrowRight className="w-5 h-5 text-flaks-dark" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Custom CTA below Plans */}
+      <section id="a-medida" className="py-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-br from-flaks-green to-emerald-400 rounded-3xl p-8 md:p-12 text-center">
+            <h3 className="text-3xl font-black font-lato text-black mb-3">
+              Necesitas un desarrollo a medida?
+            </h3>
+            <p className="text-lg text-black/80 font-lato mb-6 max-w-2xl mx-auto">
+              Diseñamos soluciones personalizadas para proyectos únicos: integraciones, funcionalidades específicas y más.
+            </p>
+            <div className="flex justify-center">
+              <Button
+                className="bg-black hover:bg-flaks-dark text-flaks-green font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300 transform hover:scale-105"
+                onClick={() => (window.location.href = "#contacto")}
+              >
+                Contanos sobre tu proyecto
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -288,7 +403,9 @@ export default function DesarrolloWeb() {
         </div>
       </section>
       {/* Remix: Proceso + Form */}
-      <RemixProcessForm />
+      <div id="contacto">
+        <RemixProcessForm />
+      </div>
       <Footer />
     </div>
   );

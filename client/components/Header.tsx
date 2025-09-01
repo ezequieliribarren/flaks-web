@@ -9,7 +9,6 @@ export default function Header() {
     { name: "Desarrollo Web", href: "/desarrollo-web" },
     { name: "Redes Sociales", href: "/redes-sociales" },
     { name: "Pauta Publicitaria", href: "/pauta-publicitaria" },
-    { name: "Contacto", href: "#contacto" },
   ];
 
   return (
@@ -19,7 +18,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="/" aria-label="FLAKS" className="flex items-center">
-              <img src="/logo.svg" alt="FLAKS" className="h-7 w-auto" />
+              <img src="/logo.png" alt="FLAKS" className="h-7 w-auto" />
             </a>
           </div>
 
@@ -39,7 +38,7 @@ export default function Header() {
           {/* CTA Button */}
           <div className="hidden md:flex">
             <Button className="bg-flaks-green hover:bg-flaks-green-dark text-black font-lato font-bold px-6 py-2 rounded-lg transition-all duration-300 transform hover:scale-105">
-              ¡Empecemos!
+              ¡Contactanos!
             </Button>
           </div>
 
