@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { z } from 'zod';
-import { ContactService, ContactRequest } from '../shared/api';
+import { ContactService } from '../shared/api';
 import { Input } from '../client/components/ui/input';
 import { Textarea } from '../client/components/ui/textarea';
 import { Button } from '../client/components/ui/button';
@@ -27,6 +27,8 @@ const formSchema = z.object({
 });
 
 export default function ContactForm({ compact = false }: { compact?: boolean }) {
+  const CONTACT_ENDPOINT = (import.meta as any)?.env?.VITE_CONTACT_ENDPOINT || '/contact.php';
+
   const [values, setValues] = useState({
     name: '',
     email: '',
@@ -53,7 +55,10 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
       formData.append('phone', values.phone);
       formData.append('service', values.service);
       if (values.message) formData.append('message', values.message);
-      const res = await fetch('/contact.php', { method: 'POST', body: formData });
+      const res = await fetch(CONTACT_ENDPOINT, { method: 'POST', body: formData });
+      const ct = res.headers.get('content-type') || '';
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      if (!ct.includes('application/json')) throw new Error('Respuesta no JSON');
       const json = (await res.json()) as { ok: boolean; error?: string };
       if (json.ok) {
         const loc = typeof window !== 'undefined' ? window.location : null;
@@ -65,7 +70,12 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
         setStatus(json.error || 'Ocurrió un error. Intenta nuevamente.');
       }
     } catch (err) {
-      setStatus('Error de conexión.');
+      const isDev = typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+      setStatus(
+        isDev
+          ? 'No se pudo conectar al endpoint. En dev, configurá VITE_CONTACT_ENDPOINT hacia tu contact.php en un hosting con PHP.'
+          : 'Error de conexión. Intentá nuevamente.',
+      );
     } finally {
       setSubmitting(false);
     }
@@ -145,3 +155,4 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
     </form>
   );
 }
+

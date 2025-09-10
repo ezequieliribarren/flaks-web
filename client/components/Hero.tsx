@@ -1,9 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap, Play } from "lucide-react";
+import { useRef, useState } from "react";
 
 export default function Hero() {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
+  const [ended, setEnded] = useState(false);
   return (
-    <section className="relative bg-gradient-to-br from-flaks-gradient-start to-flaks-gradient-end min-h-[90vh] flex items-center overflow-hidden">
+    <section className="relative bg-gradient-to-br from-flaks-gradient-start to-flaks-gradient-end min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-flaks-green/10 rounded-full blur-3xl"></div>
@@ -16,8 +21,8 @@ export default function Hero() {
         <div className="absolute top-3/4 right-0 w-full h-px bg-gradient-to-l from-transparent via-flaks-green/20 to-transparent transform -rotate-12"></div>
       </div>
 
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-14 items-center min-h-[80vh]">
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-14 items-center md:min-h-[70vh]">
           {/* Left Side - Content */}
           <div className="space-y-12">
             {/* Badge */}
@@ -27,7 +32,7 @@ export default function Hero() {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black font-lato text-white leading-tight">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black font-lato text-white leading-tight">
               Impulsamos tu{" "}
               <span className="text-flaks-green relative">
                 presencia digital
@@ -42,63 +47,43 @@ export default function Hero() {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-flaks-green hover:bg-flaks-green-dark text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-flaks-green/25">
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button
+                className="bg-flaks-green hover:bg-flaks-green-dark text-black font-lato font-bold px-5 py-3 text-base md:px-6 md:py-4 md:text-lg rounded-xl transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-flaks-green/25"
+                onClick={() =>
+                  document
+                    .getElementById("contacto")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
                 ¡Empecemos Ahora!
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
           
             </div>
-
-            {/* Quick Actions */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button
-                className="bg-flaks-green/10 hover:bg-flaks-green text-white/70 border border-flaks-green/70 font-lato font-bold px-6 py-3 rounded-xl transition-all duration-300"
-                onClick={() =>
-                  document
-                    .getElementById("desarrollo-web")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-              >
-                Desarrollo web
-              </Button>
-              <Button
-                className="bg-flaks-green/10 hover:bg-flaks-green text-white/70 border border-flaks-green/70 font-lato font-bold px-6 py-3 rounded-xl transition-all duration-300"
-                onClick={() =>
-                  document
-                    .getElementById("redes-sociales")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-              >
-                Gestion de redes sociales
-              </Button>
-              <Button
-                className="bg-flaks-green/10 hover:bg-flaks-green text-white/70 border border-flaks-green/70 font-lato font-bold px-6 py-3 rounded-xl transition-all duration-300"
-                onClick={() =>
-                  document
-                    .getElementById("pauta-publicitaria")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-              >
-                Pauta publicitaria
-              </Button>
-            </div>
           </div>
 
           {/* Right Side - Video */}
-          <div className="relative">
-            <div className="relative aspect-video bg-flaks-gray-dark rounded-2xl overflow-hidden shadow-2xl border border-flaks-green/20">
+          <div className="relative hidden lg:block">
+            <div className="relative aspect-video bg-flaks-gray-dark rounded-2xl overflow-hidden shadow-2xl border border-flaks-green/20 mt-8 md:mt-0 ">
+              <video
+                ref={videoRef}
+                src="/vsl.mp4"
+                className="w-full h-full object-cover"
+                preload="auto"
+                controls
+                onPlay={() => { setIsPlaying(true); setHasStarted(true); setEnded(false); }}
+                onPause={() => setIsPlaying(false)}
+                onEnded={() => { setIsPlaying(false); setEnded(true); }}
+              />
               {/* Video Placeholder */}
-              <div className="absolute inset-0 bg-gradient-to-br from-flaks-gray-dark to-flaks-dark-secondary flex items-center justify-center">
+              <div
+                onClick={() => videoRef.current?.play()}
+                className={`absolute inset-0 bg-gradient-to-br from-flaks-gray-dark/60 to-flaks-dark-secondary/60 flex items-center justify-center cursor-pointer ${(!hasStarted || ended) ? '' : 'hidden'}`}
+              >
                 <div className="text-center space-y-4">
-                  <div className="w-20 h-20 bg-flaks-green rounded-full flex items-center justify-center mx-auto group cursor-pointer hover:bg-flaks-green-dark transition-colors duration-300">
-                    <Play className="w-8 h-8 text-black ml-1" />
-                  </div>
-                  <div className="text-white font-lato font-bold text-lg">
-                    Descubre FLAKS
-                  </div>
-                  <div className="text-gray-400 font-lato text-sm">
-                    Video de presentación
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-flaks-green rounded-full flex items-center justify-center mx-auto group cursor-pointer hover:bg-flaks-green-dark transition-colors duration-300">
+                    <Play className="w-7 h-7 md:w-8 md:h-8 text-black ml-1" />
                   </div>
                 </div>
               </div>

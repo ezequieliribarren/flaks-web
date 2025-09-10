@@ -4,21 +4,36 @@ import {
   MapPin,
   Instagram,
   Facebook,
-  Linkedin,
-  Twitter,
   ArrowUp,
 } from "lucide-react";
+import { Link, useInRouterContext } from "react-router-dom";
 
 export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const inRouter = useInRouterContext();
+  const SmartLink = (
+    props: React.PropsWithChildren<{ to?: string; href?: string; className?: string }>,
+  ) => {
+    const { to, href, className, children } = props;
+    const dest = to ?? href ?? "#";
+    return inRouter ? (
+      <Link to={dest} className={className}>
+        {children}
+      </Link>
+    ) : (
+      <a href={dest} className={className}>
+        {children}
+      </a>
+    );
+  };
+
   const services = [
     "Landing Pages",
     "Web Profesional",
     "Tiendas Online",
-    "Desarrollo a Medida",
   ];
 
   const serviceLinks: Record<string, string> = {
@@ -51,26 +66,25 @@ export default function Footer() {
               <img src="/logo.png" alt="Flaks" width="145px" />
             </div>
             <p className="text-gray-300 font-lato mb-6 leading-relaxed">
-              Creamos experiencias digitales que conectan tu negocio con más
-              clientes. Velocidad, innovación y resultados garantizados.
+              Creamos experiencias digitales que conectan tu negocio con más clientes.
             </p>
 
             {/* Social Links */}
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.instagram.com/flaksweb/"
                 className="p-2 bg-flaks-gray-dark hover:bg-flaks-green rounded-lg transition-colors duration-300 group"
               >
                 <Instagram className="w-5 h-5 text-gray-400 group-hover:text-black" />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61568721752015"
                 className="p-2 bg-flaks-gray-dark hover:bg-flaks-green rounded-lg transition-colors duration-300 group"
               >
                 <Facebook className="w-5 h-5 text-gray-400 group-hover:text-black" />
               </a>
               <a
-                href="#"
+                href="tel:+5491128955606"
                 className="p-2 bg-flaks-gray-dark hover:bg-flaks-green rounded-lg transition-colors duration-300 group"
               >
                 <Phone className="w-5 h-5 text-gray-400 group-hover:text-black" />
@@ -80,12 +94,10 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-bold font-lato text-white mb-6">
-              Servicios
-            </h3>
+            <h3 className="text-lg font-bold font-lato text-white mb-6">Servicios</h3>
             <ul className="space-y-3">
-              {services.map((service, index) => (
-                <li key={index}>
+              {services.map((service) => (
+                <li key={service}>
                   <a
                     href={serviceLinks[service] ?? "#"}
                     className="text-gray-300 hover:text-flaks-green font-lato transition-colors duration-300"
@@ -99,12 +111,10 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-lg font-bold font-lato text-white mb-6">
-              Empresa
-            </h3>
+            <h3 className="text-lg font-bold font-lato text-white mb-6">Empresa</h3>
             <ul className="space-y-3">
-              {company.map((item, index) => (
-                <li key={index}>
+              {company.map((item) => (
+                <li key={item}>
                   <a
                     href={companyLinks[item] ?? "#"}
                     className="text-gray-300 hover:text-flaks-green font-lato transition-colors duration-300"
@@ -118,36 +128,30 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-bold font-lato text-white mb-6">
-              Contacto
-            </h3>
+            <h3 className="text-lg font-bold font-lato text-white mb-6">Contacto</h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-flaks-green mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-300 font-lato">
-                    Buenos Aires, Argentina
-                  </p>
+                  <p className="text-gray-300 font-lato">Buenos Aires, Argentina</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-flaks-green mt-1 flex-shrink-0" />
                 <div>
-                 <a href="tel:+5491128955606" className="text-gray-300 font-lato">
-  +54 9 11 2895-5606
-</a>
-
+                  <a href="tel:+5491128955606" className="text-gray-300 font-lato">
+                    +54 9 11 2895-5606
+                  </a>
                 </div>
               </div>
 
               <div className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-flaks-green mt-1 flex-shrink-0" />
                 <div>
-                 <a href="mailto:info@flaks.com.ar" className="text-gray-300 font-lato">
-  info@flaks.com.ar
-</a>
-
+                  <a href="mailto:info@flaks.com.ar" className="text-gray-300 font-lato">
+                    info@flaks.com.ar
+                  </a>
                 </div>
               </div>
             </div>
@@ -162,18 +166,12 @@ export default function Footer() {
             </div>
 
             <div className="flex items-center space-x-6">
-              <a
-                href="#"
-                className="text-gray-400 hover:text-flaks-green font-lato transition-colors duration-300"
-              >
-                Términos y Condiciones
-              </a>
-              <a
-                href="#"
+              <SmartLink
+                to="/privacidad"
                 className="text-gray-400 hover:text-flaks-green font-lato transition-colors duration-300"
               >
                 Política de Privacidad
-              </a>
+              </SmartLink>
 
               {/* Scroll to top button */}
               <button

@@ -17,23 +17,23 @@ import {
   Clock,
   Target,
   Zap,
+  Linkedin,
 } from "lucide-react";
 
 export default function RedesSociales() {
+  const PHONE = "5491128955606";
   const plans = [
     {
       icon: Instagram,
-      title: "Plan Básico",
+      title: "Plan Presencia",
       subtitle: "PERFECTO PARA EMPEZAR",
-      description: "Gestión de 1-2 redes sociales",
+      description: "Creación de contenido para tus redes",
       features: [
-        "8-12 publicaciones mensuales de calidad",
-        "Historias y reels básicos",
-        "Diseño gráfico profesional incluido",
-        "Programación de contenido estratégico",
-        "Respuesta a mensajes en horario comercial",
-        "Análisis mensual básico",
-        "Hashtags optimizados",
+        "Incluye: 2 reels, 2 carruseles y 15 historias",
+        "Apertura y diseño inicial de cuentas (IG y FB)",
+        "Diseños listos para publicar con textos atractivos",
+        "Identidad visual alineada a tu marca",
+        "Organización de contenido según posteo"
       ],
       color: "from-pink-500 to-purple-600",
     },
@@ -43,32 +43,29 @@ export default function RedesSociales() {
       subtitle: "CRECIMIENTO ACELERADO",
       description: "Gestión completa + estrategia",
       features: [
-        "15-20 publicaciones mensuales premium",
-        "Stories diarios y reels profesionales",
-        "Diseño gráfico premium con tu branding",
+        "Incluye: 3 reels, 3 carruseles y 20 historias",
+        "Apertura y/o optimización de cuentas (IG, FB y Tik-Tok)",
         "Análisis y reportes detallados mensuales",
-        "Community management completo",
+        "Community management",
         "Estrategia de contenidos personalizada",
         "Interacción con audiencia",
-        "Gestión de crisis en redes",
       ],
       color: "from-flaks-green to-emerald-400",
       featured: true,
     },
     {
       icon: Users,
-      title: "Plan Empresarial",
+      title: "Plan Total",
       subtitle: "MÁXIMO IMPACTO",
       description: "Gestión integral + publicidad",
       features: [
-        "25+ publicaciones mensuales premium",
-        "Contenido de alta calidad y profesional",
-        "Gestión de múltiples plataformas",
-        "Reportes detallados y métricas avanzadas",
-        "Community management 24/7",
-        "Estrategia integral de marca",
+      "Incluye: 4 reels, 4 carruseles y 25 historias",
+        "Plataformas: Instagram, Facebook, Tik-tok, Youtube.",
+        "Reportes detallados y métricas semanales",
+        "Community management completo",
+        "Moderación de comentarios y mensajes",
         "Campañas publicitarias básicas incluidas",
-        "Consultor dedicado",
+        "Soporte Whatsapp",
       ],
       color: "from-blue-500 to-indigo-600",
     },
@@ -92,6 +89,12 @@ export default function RedesSociales() {
       name: "WhatsApp Business",
       color: "text-green-500",
       description: "Estados y atención directa",
+    },
+        {
+      icon: Linkedin,
+      name: "Linkedin",
+      color: "text-blue-500",
+      description: "Posteos e interacción",
     }
   ];
 
@@ -99,12 +102,12 @@ export default function RedesSociales() {
     {
       icon: Palette,
       title: "Diseño Gráfico",
-      description: "Creatividades únicas que reflejan tu marca",
+      description: "Creatividades que reflejan tu marca",
     },
     {
       icon: Calendar,
       title: "Programación de Contenido",
-      description: "Publicaciones automáticas en horarios óptimos",
+      description: "Publicaciones en horarios óptimos",
     },
     {
       icon: BarChart,
@@ -123,8 +126,8 @@ export default function RedesSociales() {
     },
     {
       icon: Zap,
-      title: "Gestión de Crisis",
-      description: "Manejo profesional de situaciones complejas",
+      title: "Soporte",
+      description: "Via whatsapp y email",
     },
   ];
 
@@ -156,7 +159,7 @@ export default function RedesSociales() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-flaks-gradient-start to-flaks-gradient-end py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-flaks-gradient-start to-flaks-gradient-end pt-10 md:pt-12 lg:pt-16 pb-12 md:pb-16 lg:pb-20 overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-flaks-green/10 rounded-full blur-3xl"></div>
@@ -164,33 +167,51 @@ export default function RedesSociales() {
         </div>
 
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-14 items-center">
             {/* Left: Content */}
             <div>
-              <div className="inline-flex items-center px-4 py-2 bg-flaks-green/10 border border-flaks-green/20 rounded-full text-flaks-green font-lato font-medium text-sm mb-6">
+              <div className="inline-flex items-center px-4 py-2 bg-flaks-green/10 border border-flaks-green/20 rounded-full text-flaks-green font-lato font-medium text-sm mb-8">
                 <Instagram className="w-4 h-4 mr-2" />
                 Gestión Profesional de Redes
               </div>
 
-              <h1 className="text-4xl md:text-5xl font-black font-lato text-white mb-6 leading-tight">
+              <h1 className="text-3xl md:text-5xl font-black font-lato text-white mb-6 md:mb-8 leading-tight">
                 Gestionamos tus{" "}
                 <span className="text-flaks-green"> redes sociales</span>
-            
+
               </h1>
 
-              <p className="text-xl text-gray-300 font-lato mb-8 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-300 font-lato mb-8 md:mb-10 leading-relaxed">
                 Creamos contenido estratégico que conecta con tu audiencia, hace
                 crecer tu comunidad y convierte seguidores en clientes reales.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-flaks-green hover:bg-flaks-green-dark text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300 transform hover:scale-105">
+                <Button
+                  className="bg-flaks-green hover:bg-flaks-green-dark text-black font-lato font-bold px-5 py-3 text-base md:px-8 md:py-4 md:text-lg rounded-xl transition-all duration-300 transform hover:scale-105"
+                  onClick={() => {
+                    const el = document.getElementById("planes");
+                    if (el) {
+                      el.scrollIntoView({ behavior: "smooth" });
+                    } else {
+                      window.location.hash = "#planes";
+                    }
+                  }}
+                >
                   Ver Nuestros Planes
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-flaks-green text-flaks-violet-dark hover:bg-flaks-green hover:text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300"
+                  className="border-flaks-green text-flaks-violet-dark hover:bg-flaks-green hover:text-black font-lato font-bold px-5 py-3 text-base md:px-8 md:py-4 md:text-lg rounded-xl transition-all duration-300"
+                  onClick={() => {
+                    const el = document.getElementById("contacto");
+                    if (el) {
+                      el.scrollIntoView({ behavior: "smooth" });
+                    } else {
+                      window.location.hash = "#contacto";
+                    }
+                  }}
                 >
                   Solicitar Presupuesto
                 </Button>
@@ -198,21 +219,9 @@ export default function RedesSociales() {
             </div>
 
             {/* Right: Social Media Visual */}
-            <div className="relative">
-              <div className="aspect-square bg-flaks-green/10 rounded-3xl backdrop-blur-sm border border-flaks-green/20 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="flex justify-center space-x-4 mb-6">
-                    <Instagram className="w-12 h-12 text-pink-500" />
-                    <Facebook className="w-12 h-12 text-blue-600" />
-                    <MessageCircle className="w-12 h-12 text-green-500" />
-                  </div>
-                  <h3 className="text-xl font-bold font-lato text-white mb-2">
-                    Gestión Integral
-                  </h3>
-                  <p className="text-gray-300 font-lato">
-                    Todas tus redes en un solo lugar
-                  </p>
-                </div>
+            <div className="self-start mt-4 md:mt-0 hidden lg:block">
+              <div className="bg-flaks-green/10 rounded-2xl backdrop-blur-sm border border-flaks-green/20 flex items-center justify-center p-4">
+                <img className="w-full max-w-[360px] h-auto object-contain" src="/redes-sociales-header.webp" alt="Redes sociales" />
               </div>
             </div>
           </div>
@@ -249,21 +258,25 @@ export default function RedesSociales() {
                 </div>
               );
             })}
+          </div> 
+          <div className="text-center mt-4">
+            <h3 className="text-2xl font-lato text-flaks-dark mb-4">
+              Y muchas {" "}
+              <span className="text-flaks-violet-dark">más...</span>
+            </h3>
           </div>
+          
         </div>
+         
       </section>
 
       {/* Plans Section */}
-      <section className="py-20 bg-white">
+      <section id="planes" className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black font-lato text-flaks-dark mb-6">
-              Nuestros <span className="text-flaks-green">Planes</span>
+              Nuestros <span className="text-flaks-violet-dark">Planes</span>
             </h2>
-            <p className="text-xl text-gray-600 font-lato max-w-3xl mx-auto">
-              Elegí el plan que mejor se adapte a tu negocio. Todos incluyen
-              contenido de calidad y estrategia personalizada.
-            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -272,9 +285,7 @@ export default function RedesSociales() {
               return (
                 <Card
                   key={index}
-                  className={`relative overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
-                    plan.featured ? "ring-2 ring-flaks-green shadow-2xl" : ""
-                  }`}
+                  className={`relative overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl ${plan.featured ? "ring-2 ring-flaks-green shadow-2xl" : ""} h-full flex flex-col`}
                 >
                   {plan.featured && (
                     <div className="absolute top-0 left-0 right-0 bg-flaks-green text-black text-center py-2 font-lato font-bold text-sm">
@@ -282,17 +293,17 @@ export default function RedesSociales() {
                     </div>
                   )}
 
-                  <CardContent className="p-12 h-full flex flex-col">
+                  <CardContent className="p-8 md:p-12 flex flex-col flex-1">
                     <div className="text-center mb-6">
                       <div
                         className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${plan.color} mb-4`}
                       >
-                        <Icon className="w-8 h-8 text-white" />
+                        <Icon className="w-7 h-7 text-white" />
                       </div>
                       <h3 className="text-2xl font-black font-lato text-flaks-dark mb-2">
                         {plan.title}
                       </h3>
-                      <p className="text-sm font-bold text-flaks-green mb-1">
+                      <p className="text-sm font-bold text-flaks-violet-dark mb-1">
                         {plan.subtitle}
                       </p>
                       <p className="text-gray-600 font-lato">
@@ -300,12 +311,12 @@ export default function RedesSociales() {
                       </p>
                     </div>
 
-                    <div className="flex-grow mb-6">
+                    <div className="flex-1 mb-6">
                       <ul className="space-y-3">
-                        {plan.features.map((feature, featureIndex) => (
+                         {plan.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-start">
-                            <CheckCircle className="w-5 h-5 text-flaks-green mt-0.5 mr-3 flex-shrink-0" />
-                            <span className="text-gray-700 font-lato">
+                            <CheckCircle className="w-5 h-5 text-flaks-violet-dark mt-0.5 mr-3 flex-shrink-0" />
+                            <span className="text-gray-700 font-lato text-left">
                               {feature}
                             </span>
                           </li>
@@ -315,13 +326,23 @@ export default function RedesSociales() {
 
                     <div className="text-center">
                       <Button
-                        className={`w-full font-lato font-bold py-3 rounded-xl transition-all duration-300 ${
-                          plan.featured
+                        asChild
+                        id={index === 0 ? "cta-rs-presencia" : index === 1 ? "cta-rs-profesional" : "cta-rs-total"}
+                        data-plan={plan.title}
+                        className={`w-full font-lato font-bold py-3 rounded-xl transition-all duration-300 ${plan.featured
                             ? "bg-flaks-green hover:bg-flaks-green-dark text-black"
                             : "bg-flaks-dark hover:bg-flaks-dark-secondary text-white"
-                        }`}
+                          }`}
                       >
-                        Solicitar Presupuesto
+                        <a
+                          href={`https://wa.me/${PHONE}?text=${encodeURIComponent(
+                            `Hola estoy en la pagina web de Flaks y necesito mas información sobre el plan ${plan.title}`,
+                          )}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Solicitar Presupuesto
+                        </a>
                       </Button>
                     </div>
                   </CardContent>

@@ -117,4 +117,29 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+
+  /* Simple, lightweight animations for small UI bubbles */
+  @keyframes pop-in {
+    0% {
+      opacity: 0;
+      transform: translateY(8px) scale(0.98);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  .animate-pop-in { animation: pop-in 0.5s ease-out forwards; }
+  .animate-float { animation: float 3.6s ease-in-out infinite; }
+}
+
+
+.what-flot{
+background-color: rgba(216, 242, 216, 0.322);
 }

@@ -37,7 +37,17 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:flex">
-            <Button className="bg-flaks-green hover:bg-flaks-green-dark text-black font-lato font-bold px-6 py-2 rounded-lg transition-all duration-300 transform hover:scale-105">
+            <Button
+              className="bg-flaks-green hover:bg-flaks-green-dark text-black font-lato font-bold px-6 py-2 rounded-lg transition-all duration-300 transform hover:scale-105"
+              onClick={() => {
+                const el = document.getElementById("contacto");
+                if (el) {
+                  el.scrollIntoView({ behavior: "smooth" });
+                } else {
+                  window.location.href = "/#contacto";
+                }
+              }}
+            >
               ¡Contactanos!
             </Button>
           </div>
@@ -68,7 +78,18 @@ export default function Header() {
                 </a>
               ))}
               <div className="px-3 py-2">
-                <Button className="w-full bg-flaks-green hover:bg-flaks-green-dark text-black font-lato font-bold py-2 rounded-lg transition-all duration-300">
+                <Button
+                  className="w-full bg-flaks-green hover:bg-flaks-green-dark text-black font-lato font-bold py-2 rounded-lg transition-all duration-300"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    const el = document.getElementById("contacto");
+                    if (el) {
+                      el.scrollIntoView({ behavior: "smooth" });
+                    } else {
+                      window.location.href = "/#contacto";
+                    }
+                  }}
+                >
                   ¡Empecemos!
                 </Button>
               </div>

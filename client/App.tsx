@@ -12,6 +12,7 @@ import ServiceDetail from "./pages/ServiceDetail";
 import DesarrolloWeb from "./pages/DesarrolloWeb";
 import RedesSociales from "./pages/RedesSociales";
 import PautaPublicitaria from "./pages/PautaPublicitaria";
+import Privacidad from "./pages/Privacidad";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/desarrollo-web" element={<DesarrolloWeb />} />
           <Route path="/redes-sociales" element={<RedesSociales />} />
           <Route path="/pauta-publicitaria" element={<PautaPublicitaria />} />
+          <Route path="/privacidad" element={<Privacidad />} />
           <Route path="/:category/:service" element={<ServiceDetail />} />
           <Route path="/:category/detalle" element={<ServiceDetail />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

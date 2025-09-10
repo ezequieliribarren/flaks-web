@@ -15,7 +15,7 @@ function CTACard({
   id: string;
 }) {
   return (
-    <section id={id} className="py-10">
+    <section id={id} className="py-5 md:py-6">
       <div className="relative overflow-hidden rounded-2xl border border-flaks-green/20 bg-white/5 backdrop-blur-sm">
         {/* Rays per card */}
         <div className="pointer-events-none absolute inset-0">
@@ -23,7 +23,7 @@ function CTACard({
           <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-flaks-green/15 to-transparent -rotate-[12deg]" />
         </div>
 
-        <div className="relative p-8 md:p-10 grid md:grid-cols-[auto_1fr_auto] items-center gap-6">
+        <div className="relative p-2 md:p-10 grid md:grid-cols-[auto_1fr_auto] items-center gap-6">
           <div className="inline-flex p-4 bg-flaks-green/10 rounded-2xl">
             <Icon className="w-8 h-8 text-flaks-green" />
           </div>
@@ -48,7 +48,7 @@ function CTACard({
 
 export default function HomeCTASections() {
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div className="container">
       <CTACard
         id="desarrollo-web"
         title="Desarrollo web"
@@ -73,4 +73,3 @@ export default function HomeCTASections() {
     </div>
   );
 }
-

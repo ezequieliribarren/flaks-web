@@ -33,14 +33,18 @@ export default function WhatsAppFloat() {
 
   return (
     <a
+      id="cta-whatsapp-float"
       href={href}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="WhatsApp Flaks"
-      className="fixed right-4 bottom-4 z-50 flex items-center gap-2 bg-flaks-green text-black font-lato font-bold px-4 py-3 rounded-full shadow-lg hover:scale-105 transition-transform"
+      className="fixed right-4 bottom-4 z-50 flex flex-col items-center gap-1 text-white font-lato hover:scale-105 transition-transform"
     >
-      WhatsApp
+      <img
+        src="/whatsapp.webp"
+        alt="WhatsApp"
+        className="w-20 h-20 rounded-full shadow-lg what-flot"
+      />
     </a>
   );
 }
-

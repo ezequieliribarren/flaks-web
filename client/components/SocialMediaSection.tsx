@@ -18,7 +18,7 @@ export default function SocialMediaSection() {
   return (
     <section
       id="redes-sociales"
-      className="py-28 bg-gray-50 relative overflow-hidden min-h-screen flex items-center"
+      className="py-16 md:py-24 bg-gray-50 relative overflow-hidden min-h-0 md:min-h-[70vh] flex items-center"
     >
       {/* Violet diagonal accents for section */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
@@ -26,17 +26,17 @@ export default function SocialMediaSection() {
         <div className="absolute top-[60%] left-0 w-full h-px bg-gradient-to-r from-transparent via-violet-500/20 to-transparent rotate-[10deg]" />
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-10 gap-20 items-center">
+        <div className="grid lg:grid-cols-10 gap-8 md:gap-16 items-center">
           {/* Left: Visual (pegada al margen) */}
           <div
             ref={socialBlockRef as any}
             className={cn(
-              "relative lg:order-1 order-2 lg:col-span-4 lg:justify-self-start lg:ml-[-5%] transition-all duration-700 ease-out",
+              "relative hidden md:block lg:order-1 order-2 lg:col-span-4 lg:justify-self-start lg:ml-[-5%] transition-all duration-700 ease-out",
               socialInView ? "opacity-100 -translate-x-0" : "opacity-0 -translate-x-8",
             )}
           >
             {/* Formas envolventes (variante sutil, lado izquierdo) */}
-            <div aria-hidden className="pointer-events-none absolute inset-0 z-0">
+            <div aria-hidden className="pointer-events-none absolute inset-0 z-0 hidden md:block">
               {/* Semicírculo desde el borde izquierdo */}
               <div
                 className="absolute left-0 top-6 w-[280px] h-[500px] rounded-r-[9999px] opacity-90"
@@ -59,10 +59,10 @@ export default function SocialMediaSection() {
 
           {/* Right: Copy + CTAs */}
           <div className="space-y-10 lg:order-2 order-1 lg:col-span-6">
-            <h2 className="text-4xl md:text-5xl font-black font-lato text-flaks-dark">
+            <h2 className="text-3xl md:text-5xl font-black font-lato text-flaks-dark">
               Gestión de <span className="text-flaks-violet-dark">Redes Sociales</span>
             </h2>
-            <p className="text-xl text-gray-700 font-lato max-w-2xl">
+            <p className="text-lg md:text-xl text-gray-700 font-lato max-w-2xl">
               Potenciamos tus perfiles con contenido efectivo y una estrategia
               clara para crecer.
             </p>
@@ -76,18 +76,11 @@ export default function SocialMediaSection() {
             </ul>
             <div className="flex gap-4">
               <Button
-                className="bg-flaks-violet-light hover:bg-flaks-violet-dark text-white font-lato font-bold px-8 py-4 rounded-xl transition-all duration-300"
+                className="bg-flaks-violet-light hover:bg-flaks-violet-dark text-white font-lato font-bold px-5 py-3 text-base md:px-8 md:py-4 md:text-lg rounded-xl transition-all duration-300"
                 onClick={() => (window.location.href = "/redes-sociales")}
               >
                 Ver servicios
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button
-                variant="outline"
-                className="border-flaks-violet-light text-flaks-violet-light hover:bg-flaks-violet-light hover:text-white font-lato font-bold px-8 py-4 rounded-xl transition-all duration-300"
-                onClick={() => (window.location.href = "/redes-sociales")}
-              >
-                Más info
               </Button>
             </div>
           </div>

@@ -33,10 +33,9 @@ export default function DesarrolloWeb() {
         "Página única y diseño a medida",
         "Hosting, dominio .com.ar y SSL incluidos",
         "Optimizada para móviles y tablets",
-        "Formulario de contacto integrado",
-        "Tiempo de entrega: 7 días hábiles",
-        "Certificado de seguridad SSL",
-        "Optimización básica de velocidad",
+        "Formulario de contacto",
+        "Tiempo de entrega: 4 días hábiles",
+        "1 correo @tumarca",
       ],
       color: "from-blue-500 to-blue-600",
     },
@@ -47,12 +46,12 @@ export default function DesarrolloWeb() {
       description: "Ideal para empresas establecidas",
       features: [
         "Hasta 5 páginas con diseño profesional",
-        "Hosting premium y dominio .com.ar",
+        "Hosting, dominio .com.ar y SSL incluidos",
         "Panel de administración CMS",
-        "SEO básico y optimización Google",
+        "SEO y optimización Google",
         "Integración con redes sociales",
         "Formularios de contacto avanzados",
-        "Tiempo de entrega: 15 días hábiles",
+        "Tiempo de entrega: 7 días hábiles",
       ],
       color: "from-flaks-green to-emerald-400",
       featured: true,
@@ -149,7 +148,7 @@ export default function DesarrolloWeb() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-flaks-gradient-start to-flaks-gradient-end py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-flaks-gradient-start to-flaks-gradient-end py-16 md:py-20 overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-flaks-green/10 rounded-full blur-3xl"></div>
@@ -157,7 +156,7 @@ export default function DesarrolloWeb() {
         </div>
 
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Left: Content */}
             <div>
               <div className="inline-flex items-center px-4 py-2 bg-flaks-green/10 border border-flaks-green/20 rounded-full text-flaks-green font-lato font-medium text-sm mb-6">
@@ -165,43 +164,39 @@ export default function DesarrolloWeb() {
                 Desarrollo Web Profesional
               </div>
 
-              <h1 className="text-4xl md:text-5xl font-black font-lato text-white mb-6 leading-tight">
+              <h1 className="text-3xl md:text-5xl font-black font-lato text-white mb-6 leading-tight">
                 Creamos tu <span className="text-flaks-green">página web</span>{" "}
                 que impulsa tu negocio
               </h1>
 
-              <p className="text-xl text-gray-300 font-lato mb-8 leading-relaxed">
-                Desde landing pages hasta e-commerce completos. Desarrollamos
+              <p className="text-lg md:text-xl text-gray-300 font-lato mb-8 leading-relaxed">
+                Desde landing pages hasta sitios a medida. Desarrollamos
                 sitios web que generan confianza, atraen clientes y están
                 disponibles 24/7.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-flaks-green hover:bg-flaks-green-dark text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300 transform hover:scale-105">
+                <Button
+                  className="bg-flaks-green hover:bg-flaks-green-dark text-black font-lato font-bold px-5 py-3 text-base md:px-8 md:py-4 md:text-lg rounded-xl transition-all duration-300 transform hover:scale-105"
+                  onClick={() => {
+                    const el = document.getElementById("planes");
+                    if (el) {
+                      el.scrollIntoView({ behavior: "smooth" });
+                    } else {
+                      window.location.hash = "#planes";
+                    }
+                  }}
+                >
                   Ver Nuestros Planes
                   <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-                <Button
-                  variant="outline"
-                  className="border-flaks-green text-flaks-green hover:bg-flaks-green hover:text-black font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300"
-                >
-                  Solicitar Presupuesto
                 </Button>
               </div>
             </div>
 
             {/* Right: Image Placeholder */}
-            <div className="relative">
-              <div className="aspect-square bg-flaks-green/10 rounded-3xl backdrop-blur-sm border border-flaks-green/20 flex items-center justify-center">
-                <div className="text-center">
-                  <Globe className="w-24 h-24 text-flaks-green mx-auto mb-4" />
-                  <h3 className="text-xl font-bold font-lato text-white mb-2">
-                    Tu Web Profesional
-                  </h3>
-                  <p className="text-gray-300 font-lato">
-                    Diseño moderno y funcional
-                  </p>
-                </div>
+            <div className="relative mt-6 md:mt-0 hidden lg:block">
+              <div className="bg-flaks-green/10 rounded-2xl backdrop-blur-sm border border-flaks-green/20 flex items-center justify-center p-4">
+                <img className="w-full max-w-[320px] md:max-w-[360px] h-auto object-contain" src="/desarrollo-web-header.webp" alt="Desarrollo web" />
               </div>
             </div>
           </div>
@@ -211,13 +206,9 @@ export default function DesarrolloWeb() {
       <section id="planes" className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black font-lato text-flaks-dark mb-6">
+            <h2 className="text-3xl md:text-5xl font-black font-lato text-flaks-dark mb-6">
               Nuestros <span className="text-flaks-violet-dark">Planes</span>
             </h2>
-            <p className="text-xl text-gray-600 font-lato max-w-3xl mx-auto">
-              Elegí la solución perfecta para tu negocio. Todos incluyen
-              hosting, dominio y soporte técnico.
-            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -236,17 +227,17 @@ export default function DesarrolloWeb() {
                     </div>
                   )}
 
-                  <CardContent className="p-12 h-full flex flex-col">
+                  <CardContent className="p-8 md:p-12 h-full flex flex-col">
                     <div className="text-center mb-6">
                       <div
                         className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${plan.color} mb-4`}
                       >
-                        <Icon className="w-8 h-8 text-white" />
+                        <Icon className="w-7 h-7 text-white" />
                       </div>
                       <h3 className="text-2xl font-black font-lato text-flaks-dark mb-2">
                         {plan.title}
                       </h3>
-                      <p className="text-sm font-bold text-flaks-green mb-1">
+                      <p className="text-sm font-bold text-flaks-violet-dark mb-1">
                         {plan.subtitle}
                       </p>
                       <p className="text-gray-600 font-lato">
@@ -269,11 +260,13 @@ export default function DesarrolloWeb() {
 
                     <div className="text-center">
                       <Button
-                        className={`w-full font-lato font-bold py-3 rounded-xl transition-all duration-300 ${
+                        id={index === 0 ? "cta-dw-landing" : index === 1 ? "cta-dw-profesional" : "cta-dw-tienda"}
+                        data-plan={plan.title}
+                        className={`w-full font-lato font-bold py-2.5 md:py-3 rounded-xl transition-all duration-300 ${
                           plan.featured
                             ? "bg-flaks-green hover:bg-flaks-green-dark text-black"
                             : "bg-flaks-dark hover:bg-flaks-dark-secondary text-white"
-                        }`}
+                          } text-base md:text-lg`}
                       >
                         Solicitar Presupuesto
                       </Button>
@@ -363,11 +356,10 @@ export default function DesarrolloWeb() {
             </p>
             <div className="flex justify-center">
               <Button
-                className="bg-black hover:bg-flaks-dark text-flaks-green font-lato font-bold px-8 py-4 text-lg rounded-xl transition-all duration-300 transform hover:scale-105"
+                className="bg-black hover:bg-flaks-dark text-flaks-green font-lato font-bold w-full sm:w-auto px-5 py-3 text-base md:px-8 md:py-4 md:text-lg rounded-xl transition-all duration-300 transform hover:scale-105"
                 onClick={() => (window.location.href = "#contacto")}
               >
-                Contanos sobre tu proyecto
-                <ArrowRight className="ml-2 w-5 h-5" />
+Contactanos                <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </div>
           </div>

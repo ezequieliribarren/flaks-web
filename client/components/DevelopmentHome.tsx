@@ -13,7 +13,7 @@ export default function DevelopmentHome() {
   return (
     <section
       id="desarrollo-web"
-      className="py-28 bg-gray-50 relative overflow-hidden min-h-screen flex items-center"
+      className="py-16 md:py-24 bg-gray-50 relative overflow-hidden min-h-0 md:min-h-[70vh] flex items-center"
     >
       {/* Violet diagonal accents for section, distinct from Hero */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
@@ -21,16 +21,16 @@ export default function DevelopmentHome() {
         <div className="absolute top-[50%] left-0 w-full h-px bg-gradient-to-r from-transparent via-violet-500/20 to-transparent -rotate-[12deg]" />
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-10 gap-20 items-center">
+        <div className="grid lg:grid-cols-10 gap-8 md:gap-16 items-center">
           {/* Left: Content */}
           <div className="space-y-10 lg:col-span-6">
             <div className="inline-flex items-center p-4 bg-flaks-violet-light/10 rounded-2xl">
               <Globe className="w-8 h-8 text-flaks-violet-light" />
             </div>
-            <h2 className="text-5xl md:text-6xl font-black font-lato text-flaks-dark">
+            <h2 className="text-3xl md:text-5xl font-black font-lato text-flaks-dark">
               Desarrollo <span className="text-flaks-violet-dark">Web</span>
             </h2>
-            <p className="text-xl text-gray-700 font-lato max-w-2xl">
+            <p className="text-lg md:text-xl text-gray-700 font-lato max-w-2xl">
               Construimos sitios modernos con foco en conversión, performance y
               escalabilidad.
             </p>
@@ -44,7 +44,7 @@ export default function DevelopmentHome() {
             </ul>
             <div>
               <Button
-                className="bg-flaks-violet-light hover:bg-flaks-violet-dark text-white font-lato font-bold px-8 py-4 rounded-xl transition-all duration-300"
+                className="bg-flaks-violet-light hover:bg-flaks-violet-dark text-white font-lato font-bold px-5 py-3 text-base md:px-8 md:py-4 md:text-lg rounded-xl transition-all duration-300"
                 onClick={() => (window.location.href = "/desarrollo-web")}
               >
                 Ver servicios
@@ -53,9 +53,9 @@ export default function DevelopmentHome() {
           </div>
 
           {/* Right: Visual */}
-          <div className="relative lg:col-span-4 lg:justify-self-end lg:mr-[-8%]">
+          <div className="relative hidden md:block lg:col-span-4 lg:justify-self-end lg:mr-[-8%]">
             {/* Decoraciones de velocidad (envolventes) */}
-            <div aria-hidden className="pointer-events-none absolute inset-0 z-0">
+            <div aria-hidden className="pointer-events-none absolute inset-0 z-0 hidden md:block">
               {/* Semicírculo desde el borde derecho que envuelve la figura */}
               <div
                 className="absolute right-0 top-6 w-[300px] h-[520px] rounded-l-[9999px] opacity-90"

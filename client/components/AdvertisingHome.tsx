@@ -19,7 +19,7 @@ export default function AdvertisingHome() {
   return (
     <section
       id="pauta-publicitaria"
-      className="py-28 bg-gray-50 relative overflow-hidden min-h-screen flex items-center"
+      className="py-16 md:py-24 bg-gray-50 relative overflow-hidden min-h-0 md:min-h-[70vh] flex items-center"
     >
       {/* Violet diagonal accents for section */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
@@ -28,13 +28,13 @@ export default function AdvertisingHome() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-10 gap-20 items-center">
+        <div className="grid lg:grid-cols-10 gap-8 md:gap-16 items-center">
           {/* Left: Content */}
           <div className="space-y-10 lg:col-span-6">
-            <h2 className="text-4xl md:text-5xl font-black font-lato text-flaks-dark">
+            <h2 className="text-3xl md:text-5xl font-black font-lato text-flaks-dark">
               Pauta <span className="text-flaks-violet-dark">Publicitaria</span>
             </h2>
-            <p className="text-xl text-gray-700 font-lato max-w-2xl">
+            <p className="text-lg md:text-xl text-gray-700 font-lato max-w-2xl">
               Convertimos tu inversión en resultados reales. Gestionamos campañas
               en Google Ads, Meta Ads y más, con foco en ROI.
             </p>
@@ -51,7 +51,7 @@ export default function AdvertisingHome() {
             </ul>
             <div>
               <Button
-                className="bg-flaks-violet-light hover:bg-flaks-violet-dark text-white font-lato font-bold px-8 py-4 rounded-xl transition-all duration-300"
+                className="bg-flaks-violet-light hover:bg-flaks-violet-dark text-white font-lato font-bold px-5 py-3 text-base md:px-8 md:py-4 md:text-lg rounded-xl transition-all duration-300"
                 onClick={() => (window.location.href = "/pauta-publicitaria")}
               >
                 Ver servicios
@@ -64,12 +64,12 @@ export default function AdvertisingHome() {
           <div
             ref={adsRef as any}
             className={cn(
-              "relative lg:col-span-4 lg:justify-self-end lg:mr-[-5%] transition-all duration-700 ease-out",
+              "relative hidden md:block lg:col-span-4 lg:justify-self-end lg:mr-[-5%] transition-all duration-700 ease-out",
               adsInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8",
             )}
           >
             {/* Formas envolventes (variante sutil, lado derecho) */}
-            <div aria-hidden className="pointer-events-none absolute inset-0 z-0">
+            <div aria-hidden className="pointer-events-none absolute inset-0 z-0 hidden md:block">
               {/* Semicírculo desde el borde derecho */}
               <div
                 className="absolute right-0 top-6 w-[300px] h-[500px] rounded-l-[9999px] opacity-90"
