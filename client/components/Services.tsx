@@ -92,7 +92,7 @@ export default function Services() {
           <h2 className="text-4xl md:text-5xl font-black font-lato text-flaks-dark mb-6">
             <span className="text-flaks-dark-secondary">Desarrollo Web</span>
           </h2>
-          <p className="text-xl text-gray-600 font-lato max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 font-lato max-w-3xl mx-auto">
             Creamos sitios web profesionales que impulsan tu negocio. Todos
             nuestros planes incluyen hosting, dominio y soporte técnico
             completo.

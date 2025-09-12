@@ -159,14 +159,22 @@ export default function RedesSociales() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-flaks-gradient-start to-flaks-gradient-end pt-10 md:pt-12 lg:pt-16 pb-12 md:pb-16 lg:pb-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-flaks-gradient-start to-flaks-gradient-end flex items-center min-h-[75vh] pt-4 md:pt-6 lg:pt-8 pb-10 md:pb-12 overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-flaks-green/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-flaks-green/5 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Right-side background figure (doesn't affect layout) */}
+        <img
+          src="/redesociales.webp"
+          alt=""
+          aria-hidden
+          className="hidden md:block pointer-events-none select-none absolute right-[8%] top-1/2 -translate-y-1/2 max-h-[140%] lg:max-h-[120%] w-auto object-contain"
+        />
+
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-14 items-center">
             {/* Left: Content */}
             <div>
@@ -218,12 +226,8 @@ export default function RedesSociales() {
               </div>
             </div>
 
-            {/* Right: Social Media Visual */}
-            <div className="self-start mt-4 md:mt-0 hidden lg:block">
-              <div className="bg-flaks-green/10 rounded-2xl backdrop-blur-sm border border-flaks-green/20 flex items-center justify-center p-4">
-                <img className="w-full max-w-[360px] h-auto object-contain" src="/redes-sociales-header.webp" alt="Redes sociales" />
-              </div>
-            </div>
+            {/* Right: Social Media Visual (replaced by background figure) */}
+            <div className="hidden"></div>
           </div>
         </div>
       </section>
@@ -394,7 +398,7 @@ export default function RedesSociales() {
             <h2 className="text-4xl font-black font-lato text-flaks-dark mb-6">
               Nuestro <span className="text-flaks-dark-secondary">Proceso</span>
             </h2>
-            <p className="text-xl text-gray-600 font-lato max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-600 font-lato max-w-3xl mx-auto">
               Te acompañamos paso a paso para hacer crecer tu presencia en redes
               sociales.
             </p>

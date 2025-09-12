@@ -70,7 +70,7 @@ export default function ServiceDetail() {
             <h1 className="text-4xl md:text-5xl font-black font-lato text-flaks-dark mb-6">
               {getPageTitle()}
             </h1>
-            <p className="text-xl text-gray-600 font-lato max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-600 font-lato max-w-3xl mx-auto leading-relaxed">
               {getServiceDescription()}
             </p>
           </div>
@@ -87,7 +87,7 @@ export default function ServiceDetail() {
                 <span className="text-flaks-green">Próximamente</span>
               </h2>
 
-              <p className="text-xl text-gray-300 font-lato mb-8 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-300 font-lato mb-8 leading-relaxed">
                 Estamos preparando toda la información detallada sobre este
                 servicio. Mientras tanto, nuestro equipo está disponible para
                 resolver todas tus dudas y brindarte un presupuesto

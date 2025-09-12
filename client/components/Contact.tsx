@@ -14,7 +14,7 @@ export default function Contact() {
           <h2 className="text-4xl md:text-5xl font-black font-lato text-black mb-6">
             Tu sitio web te está esperando
           </h2>
-          <p className="text-xl text-black/80 font-lato mb-8 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-black/80 font-lato mb-8 max-w-3xl mx-auto">
             No esperes más para tener presencia digital. Empezá hoy y llevá tu
             negocio al siguiente nivel.
           </p>
@@ -34,4 +34,3 @@ export default function Contact() {
     </>
   );
 }
-

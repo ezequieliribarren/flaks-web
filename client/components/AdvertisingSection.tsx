@@ -100,7 +100,7 @@ export default function AdvertisingSection() {
           <h2 className="text-4xl md:text-5xl font-black font-lato text-flaks-dark mb-6">
             <span className="text-flaks-green">Pauta Publicitaria</span>
           </h2>
-          <p className="text-xl text-gray-600 font-lato max-w-3xl mx-auto mb-8">
+          <p className="text-lg md:text-xl text-gray-600 font-lato max-w-3xl mx-auto mb-8">
             Convertimos tu inversión publicitaria en resultados reales.
             Gestionamos tus campañas para maximizar el retorno y hacer crecer tu
             negocio.
@@ -228,7 +228,7 @@ export default function AdvertisingSection() {
           <h3 className="text-3xl font-black font-lato text-black mb-6">
             ¿Querés maximizar tu retorno publicitario?
           </h3>
-          <p className="text-xl text-black/80 font-lato mb-8 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-black/80 font-lato mb-8 max-w-3xl mx-auto">
             Nuestros especialistas analizan tu negocio y crean campañas que
             realmente convierten. Comenzá hoy y ve los resultados en la primera
             semana.

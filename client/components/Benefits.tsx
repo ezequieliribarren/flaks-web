@@ -86,7 +86,7 @@ export default function Benefits() {
           <h2 className="text-4xl md:text-5xl font-black font-lato text-white mb-6">
             Resultados que <span className="text-flaks-green">Hablan</span>
           </h2>
-          <p className="text-xl text-gray-300 font-lato mb-12 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-300 font-lato mb-12 max-w-3xl mx-auto">
             Más de una década conectando negocios con sus clientes a través de
             soluciones digitales efectivas.
           </p>

@@ -43,7 +43,7 @@ export default function WhatsAppFloat() {
       <img
         src="/whatsapp.webp"
         alt="WhatsApp"
-        className="w-20 h-20 rounded-full shadow-lg what-flot"
+        className="w-16 h-16 md:w-20 md:h-20 rounded-full shadow-lg what-flot"
       />
     </a>
   );

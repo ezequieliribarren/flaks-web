@@ -3,7 +3,8 @@ import { ArrowRight, Zap, Play } from "lucide-react";
 import { useRef, useState } from "react";
 
 export default function Hero() {
-  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const mobileVideoRef = useRef<HTMLVideoElement | null>(null);
+  const desktopVideoRef = useRef<HTMLVideoElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [hasStarted, setHasStarted] = useState(false);
   const [ended, setEnded] = useState(false);
@@ -22,13 +23,38 @@ export default function Hero() {
       </div>
 
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 pb-10">
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-14 items-center md:min-h-[70vh]">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 md:gap-14 items-center md:min-h-[70vh]">
           {/* Left Side - Content */}
-          <div className="space-y-12">
+          <div className="space-y-12 w-full">
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 bg-flaks-green/10 border border-flaks-green/20 rounded-full text-flaks-green font-lato font-medium text-sm">
               <Zap className="w-4 h-4 mr-2" />
               Planes que se adaptan a tus objetivos
+            </div>
+
+            {/* Mobile Video (below badge) */}
+            <div className="relative aspect-video bg-flaks-gray-dark rounded-2xl overflow-hidden shadow-2xl border border-flaks-green/20 mt-4 mb-2 lg:hidden">
+              <video
+                ref={mobileVideoRef}
+                src="/vsl.mp4"
+                className="w-full h-full object-cover"
+                preload="auto"
+                controls
+                onPlay={() => { setIsPlaying(true); setHasStarted(true); setEnded(false); }}
+                onPause={() => setIsPlaying(false)}
+                onEnded={() => { setIsPlaying(false); setEnded(true); }}
+              />
+              {/* Video Placeholder */}
+              <div
+                onClick={() => mobileVideoRef.current?.play()}
+                className={`absolute inset-0 bg-gradient-to-br from-flaks-gray-dark/60 to-flaks-dark-secondary/60 flex items-center justify-center cursor-pointer ${(!hasStarted || ended) ? '' : 'hidden'}`}
+              >
+                <div className="text-center space-y-4">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-flaks-green rounded-full flex items-center justify-center mx-auto group cursor-pointer hover:bg-flaks-green-dark transition-colors duration-300">
+                    <Play className="w-7 h-7 md:w-8 md:h-8 text-black ml-1" />
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Main Headline */}
@@ -41,7 +67,7 @@ export default function Hero() {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-xl text-gray-300 font-lato font-light leading-relaxed max-w-lg">
+            <p className="text-lg md:text-xl text-gray-300 font-lato font-light leading-relaxed max-w-lg">
               Desarrollamos sitios web, gestionamos redes sociales y creamos
               campañas publicitarias que hacen crecer tu negocio.
             </p>
@@ -63,11 +89,11 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Side - Video */}
-          <div className="relative hidden lg:block">
-            <div className="relative aspect-video bg-flaks-gray-dark rounded-2xl overflow-hidden shadow-2xl border border-flaks-green/20 mt-8 md:mt-0 ">
+          {/* Right Side - Video (desktop) */}
+          <div className="relative hidden lg:block w-full">
+            <div className="relative aspect-video bg-flaks-gray-dark rounded-2xl overflow-hidden shadow-2xl border border-flaks-green/20 mt-8 md:mt-0">
               <video
-                ref={videoRef}
+                ref={desktopVideoRef}
                 src="/vsl.mp4"
                 className="w-full h-full object-cover"
                 preload="auto"
@@ -78,7 +104,7 @@ export default function Hero() {
               />
               {/* Video Placeholder */}
               <div
-                onClick={() => videoRef.current?.play()}
+                onClick={() => desktopVideoRef.current?.play()}
                 className={`absolute inset-0 bg-gradient-to-br from-flaks-gray-dark/60 to-flaks-dark-secondary/60 flex items-center justify-center cursor-pointer ${(!hasStarted || ended) ? '' : 'hidden'}`}
               >
                 <div className="text-center space-y-4">
@@ -101,8 +127,8 @@ export default function Hero() {
             </div>
 
             {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-flaks-green/10 rounded-full blur-xl"></div>
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-flaks-green/5 rounded-full blur-xl"></div>
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-flaks-green/10 rounded-full blur-xl pointer-events-none"></div>
+            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-flaks-green/5 rounded-full blur-xl pointer-events-none"></div>
           </div>
         </div>
       </div>

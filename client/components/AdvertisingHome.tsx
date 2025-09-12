@@ -19,7 +19,7 @@ export default function AdvertisingHome() {
   return (
     <section
       id="pauta-publicitaria"
-      className="py-16 md:py-24 bg-gray-50 relative overflow-hidden min-h-0 md:min-h-[70vh] flex items-center"
+      className="py-20 md:py-24 bg-gray-50 relative overflow-hidden min-h-[65vh] md:min-h-[70vh] flex items-center"
     >
       {/* Violet diagonal accents for section */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
@@ -27,10 +27,18 @@ export default function AdvertisingHome() {
         <div className="absolute top-[58%] left-0 w-full h-px bg-gradient-to-r from-transparent via-violet-500/20 to-transparent -rotate-[11deg]" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Mobile decorative figure on the right */}
+      <img
+        src="/pauta.png"
+        alt=""
+        aria-hidden
+        className="md:hidden pointer-events-none select-none absolute right-0 top-1/2 -translate-y-1/2 h-[70%] opacity-10 object-contain"
+      />
+
+      <div className="container mx-auto px-8 sm:px-10 lg:px-10">
         <div className="grid lg:grid-cols-10 gap-8 md:gap-16 items-center">
           {/* Left: Content */}
-          <div className="space-y-10 lg:col-span-6">
+          <div className="relative z-10 space-y-10 lg:col-span-6">
             <h2 className="text-3xl md:text-5xl font-black font-lato text-flaks-dark">
               Pauta <span className="text-flaks-violet-dark">Publicitaria</span>
             </h2>
@@ -38,12 +46,15 @@ export default function AdvertisingHome() {
               Convertimos tu inversión en resultados reales. Gestionamos campañas
               en Google Ads, Meta Ads y más, con foco en ROI.
             </p>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {bullets.map((b, i) => {
                 const Icon = b.icon;
                 return (
-                  <li key={i} className="flex items-start text-gray-700 font-lato">
-                    <Icon className="w-5 h-5 text-flaks-violet-light mt-0.5 mr-3 flex-shrink-0" />
+                  <li
+                    key={i}
+                    className="flex items-start gap-3 text-gray-700 font-lato rounded-2xl border border-flaks-violet-light/30 bg-white p-4 shadow-sm min-h-[56px]"
+                  >
+                    <Icon className="w-5 h-5 text-flaks-violet-light mt-0.5 flex-shrink-0" />
                     <span>{b.text}</span>
                   </li>
                 );
@@ -54,7 +65,7 @@ export default function AdvertisingHome() {
                 className="bg-flaks-violet-light hover:bg-flaks-violet-dark text-white font-lato font-bold px-5 py-3 text-base md:px-8 md:py-4 md:text-lg rounded-xl transition-all duration-300"
                 onClick={() => (window.location.href = "/pauta-publicitaria")}
               >
-                Ver servicios
+                Ver servicio
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </div>

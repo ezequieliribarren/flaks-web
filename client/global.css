@@ -143,3 +143,11 @@
 .what-flot{
 background-color: rgba(216, 242, 216, 0.322);
 }
+
+/* Mobile typography tweaks */
+@media (max-width: 640px) {
+  p {
+    font-size: 18px;
+    line-height: 1.625;
+  }
+}
